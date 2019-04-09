@@ -1137,7 +1137,8 @@ section
 {
 	width: 100%;
 	background: #060b3a;
-	padding-bottom: 77px;
+	padding-bottom: 60px;
+	height: 450px;
 }
 .footer_logo_container
 {
@@ -1182,7 +1183,12 @@ section
 }
 .footer_about_list
 {
-	margin-top: 32px;
+	margin-top: 33px;
+}
+.footer_about_list li
+{
+	display: block;
+	text-align: lefts;	
 }
 .footer_about_list li:not(:last-child)
 {
@@ -1219,7 +1225,7 @@ section
 }
 .footer_column
 {
-	padding-top: 138px;
+	padding-top: 120px;
 }
 .footer_title
 {
