@@ -1,0 +1,11 @@
+Patient
+FirstName : Fatbardh
+Surname : Kadriu
+Username : bardhi
+Password : 1234567890
+Phone Number : 44 111 222
+Email : fatbardh.kadriu@gmail.com
+Date Of Birth : 2019-04-10
+City : Street 123
+Street : Street 123
+Gender : Male

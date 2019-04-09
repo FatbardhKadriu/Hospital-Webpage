@@ -213,8 +213,8 @@ button a{
     </fieldset>
     <fieldset>
     Gender   
-      <input type="radio" name="Patient_Male" value="male" required>Male</input>
-      <input type="radio" name="Patient_Male" value="female" required>Female</input>
+      <input type="radio" name="Patient_Male" value="Male" required>Male</input>
+      <input type="radio" name="Patient_Male" value="Female" required>Female</input>
     </fieldset>
     <fieldset>
      <input placeholder="Street Name" type="text" name="Patient_Street_Name" tabindex="7" >
@@ -258,12 +258,17 @@ if(isset($_POST['submit']))
     $Patient_Password = $_POST['Patient_Password'];
     $Patient_Phone_No = $_POST['Patient_Phone_No'];
     $Patient_Email = $_POST['Patient_Email'];
+    $Patient_Street_Name = $_POST['Patient_Street_Name'];
     $Patient_Date_Of_Birth = $_POST['Patient_Date_Of_Birth'];
+    $M = $_POST['Patient_Male'];
+    $F = $_POST['Patient_Female'];
+    $Patient_Street_Name = $_POST['Patient_Street_Name'];
     
     $file = fopen("Patient/$Patient_Name $Patient_Surname.txt","w+") or die("file not open");
 
-     fputs($file,"Patient\nName :".$Patient_Name."\nSurname is : ".$Patient_Surname."\nUsername : ".$Patient_Username."\nPassword : ".$Patient_Password
-     ."\nPhone Number : ".$Patient_Phone_No."\nEmail : ".$Patient_Email."\nDate Of Birth : ".$Patient_Date_Of_Birth) or die("Data not write");
+     fputs($file,"Patient\nFirstName : ".$Patient_Name."\nSurname : ".$Patient_Surname."\nUsername : ".$Patient_Username."\nPassword : ".$Patient_Password
+     ."\nPhone Number : ".$Patient_Phone_No."\nEmail : ".$Patient_Email."\nDate Of Birth : ".$Patient_Date_Of_Birth.
+     "\nCity : ".$Patient_Street_Name."\nStreet : ".$Patient_Street_Name."\nGender : ".$M.$F) or die("Data not write");
 
     fclose($file);
 }
