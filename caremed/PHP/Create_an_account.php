@@ -99,7 +99,7 @@ fieldset {
   resize: none;
 }
 
-#contact button[type="submit"] {
+input[type="submit"]{
   cursor: pointer;
   width: 100%;
   border: none;
@@ -107,18 +107,14 @@ fieldset {
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
-  font-size: 15px;
+  font-size: 15px;}
+input[type="submit"]:hover{
+    color:#20d34a;
+    transition: background-color 0.3s ease-in-out;
 }
-
-#contact button[type="submit"]:hover {
-  color: #20d34a;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-}
-
-#contact button[type="submit"]:active {
+input[type="submit"]:active{
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+
 }
 
 #contact input:focus,
@@ -246,7 +242,7 @@ button a{
     <option value="canada">Canada</option><option value="cape-verde">Cape Verde</option><option value="cayman-islands">Cayman Islands</option>
     </select></label>
     <fieldset style="margin-top : 15px">
-      <button name="Request Appointment" type="submit" id="contact-submit" data-submit="...Sending">Create an account</button>
+    <input type="submit" name="submit" value="Create an account"/>
     </fieldset>
 
   </form>

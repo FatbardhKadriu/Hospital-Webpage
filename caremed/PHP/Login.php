@@ -189,7 +189,7 @@ button a{
     </fieldset>
    
     <fieldset style="margin-top : 15px">
-    <input type="submit" name="submit" value="LOGIN"/>
+    <input type="submit" name="submit" value="Login"/>
     </fieldset>
     <div style="text-align:right">
     <p>Don't have an account?</p>
