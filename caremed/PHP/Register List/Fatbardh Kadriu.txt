@@ -1,0 +1,8 @@
+Patient
+Name :Fatbardh
+Surname is : Kadriu
+Username : bardhi
+Password : 123
+Phone Number : 44
+Email : fatbardh.kadriu@gmail.com
+Date Of Birth : 2019-04-10
