@@ -1,0 +1,8 @@
+Patient
+Name :Fortesa
+Surname is : Hysenaj
+Username : Fortii
+Password : 12345678
+Phone Number : 44 111 222
+Email : fortesa@hotmail.com
+Date Of Birth : 2019-04-11

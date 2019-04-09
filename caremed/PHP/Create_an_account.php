@@ -260,7 +260,7 @@ if(isset($_POST['submit']))
     $Patient_Email = $_POST['Patient_Email'];
     $Patient_Date_Of_Birth = $_POST['Patient_Date_Of_Birth'];
     
-    $file = fopen("Register List/$Patient_Name $Patient_Surname.txt","w+") or die("file not open");
+    $file = fopen("Patient/$Patient_Name $Patient_Surname.txt","w+") or die("file not open");
 
      fputs($file,"Patient\nName :".$Patient_Name."\nSurname is : ".$Patient_Surname."\nUsername : ".$Patient_Username."\nPassword : ".$Patient_Password
      ."\nPhone Number : ".$Patient_Phone_No."\nEmail : ".$Patient_Email."\nDate Of Birth : ".$Patient_Date_Of_Birth) or die("Data not write");
