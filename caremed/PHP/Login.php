@@ -176,7 +176,7 @@ button a{
     </style>
 </head>
 <body>
-    <button class="button button2"><a href="index.html">HOME</a></button>
+    <button class="button button2"><a href="../index.html">HOME</a></button>
 <div class="container">  
   <form id="contact" action="" method="post">
     <h3 style="color:#4682B4; text-align: center">Login</h3>

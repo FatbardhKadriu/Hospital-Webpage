@@ -185,7 +185,7 @@ button a{
     </style>
 </head>
 <body>
-        <button class="button button2"><a href="index.html">HOME</a></button>
+        <button class="button button2"><a href="../index.html">HOME</a></button>
 <div class="container">  
   <form id="contact" action="Create_an_account.php" method="post">
     <h3 style="color:#4682B4; text-align: center">Create an account</h3>
