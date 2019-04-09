@@ -193,7 +193,7 @@ button a{
     </fieldset>
     <div style="text-align:right">
     <p>Don't have an account?</p>
-    <p><a href="Create an account.html">Create one</a></p>
+    <p><a href="Create_an_account.php">Create one</a></p>
     </div>
   </form>
 </div>
