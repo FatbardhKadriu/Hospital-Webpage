@@ -200,7 +200,7 @@ button a{
     
     <fieldset>
       <legend>Enter your personal details below:</legend>
-      <input placeholder="Full Name" type="text" name="Patient_Name" tabindex="1" required autofocus>
+      <input placeholder="Full Name" type="text" name="Patient_fullName" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
      <input placeholder="Adress" type="text" name="Patient_Adress" tabindex="7" >
@@ -231,7 +231,7 @@ button a{
      <input id="pass" placeholder="Password" type="password" name="Patient_Password" tabindex="2" required>
     </fieldset>
     <fieldset>
-     <input id="pass" placeholder="Password Again" type="password" name="Patient_Password" tabindex="2" required>
+     <input id="pass" placeholder="Password Again" type="password" name="Patient_CPassword" tabindex="2" required>
     </fieldset>
    
     <fieldset style="margin-top : 15px">
@@ -245,23 +245,20 @@ button a{
 <?php
 if(isset($_POST['submit']))
 {
-    $Patient_Name = $_POST['Patient_Name'];
-    $Patient_Surname = $_POST['Patient_Surname'];
+    $Patient_FullName = $_POST['Patient_fullName'];
     $Patient_Username = $_POST['Patient_Username'];
     $Patient_Password = $_POST['Patient_Password'];
-    $Patient_Phone_No = $_POST['Patient_Phone_No'];
     $Patient_Email = $_POST['Patient_Email'];
-    $Patient_Street_Name = $_POST['Patient_Street_Name'];
+    $Patient_Adress = $_POST['Patient_Adress'];
     $Patient_Date_Of_Birth = $_POST['Patient_Date_Of_Birth'];
     $M = $_POST['Patient_Male'];
     $F = $_POST['Patient_Female'];
-    $Patient_Street_Name = $_POST['Patient_Street_Name'];
+    $Patient_City = $_POST['Patient_City'];
     
-    $file = fopen("Patient/$Patient_Name $Patient_Surname.txt","w+") or die("file not open");
+    $file = fopen("Patient/$Patient_FullName.txt","w+") or die("file not open");
 
-     fputs($file,"Patient\nFirstName : ".$Patient_Name."\nSurname : ".$Patient_Surname."\nUsername : ".$Patient_Username."\nPassword : ".$Patient_Password
-     ."\nPhone Number : ".$Patient_Phone_No."\nEmail : ".$Patient_Email."\nDate Of Birth : ".$Patient_Date_Of_Birth.
-     "\nCity : ".$Patient_Street_Name."\nStreet : ".$Patient_Street_Name."\nGender : ".$M.$F) or die("Data not write");
+     fputs($file,"FullName : ".$Patient_FullName."\nUsername : ".$Patient_Username."\nPassword : ".$Patient_Password
+     ."\nEmail : ".$Patient_Email."\nCity : ".$Patient_City."\nAdress : ".$Patient_Adress."\nGender : ".$M.$F) or die("Data not write");
 
     fclose($file);
 }
