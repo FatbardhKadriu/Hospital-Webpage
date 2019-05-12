@@ -22,9 +22,14 @@ body {
   font-weight: 100;
   font-size: 12px;
   line-height: 30px;
-  color: #777;
-  background: #283290;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
+    url(image.jpg);
+    background-size: cover;
+    background-position: center;
+  
 }
+
 
 .container {
   max-width: 400px;
@@ -47,6 +52,8 @@ body {
   padding: 25px;
   margin: 60px 0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5), 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+  background-color: transparent !important;
+
 }
 
 #contact h3 {
@@ -172,7 +179,8 @@ input[type="submit"]:active{
   margin: 4px 2px;
   cursor: pointer;
 }
-.button2 {background-color: #283290;} /* Blue */
+.button2 {background-color: #283290;  background-color: transparent !important;
+} /* Blue */
 .button a:hover
 {
   color: #20d34a;
@@ -188,25 +196,17 @@ button a{
         <button class="button button2"><a href="../index.php">HOME</a></button>
 <div class="container">  
   <form id="contact" action="Create_an_account.php" method="post">
-    <h3 style="color:#4682B4; text-align: center">Create an account</h3>
+    <h3 style="color:white; text-align: center">Create an account</h3>
     
     <fieldset>
-      <input placeholder="First Name" type="text" name="Patient_Name" tabindex="1" required autofocus>
+      <legend>Enter your personal details below:</legend>
+      <input placeholder="Full Name" type="text" name="Patient_Name" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Last Name" type="text" name="Patient_Surname" tabindex="2" required>
+     <input placeholder="Adress" type="text" name="Patient_Adress" tabindex="7" >
     </fieldset>
     <fieldset>
-    <fieldset>
-        <input placeholder="Username" type="text" name="Patient_Username" tabindex="1" required autofo
-    </fieldset>
-    <fieldset>
-     <input id="pass" placeholder="Password" type="password" name="Patient_Password" tabindex="2" required>
-    </fieldset>
-      <input placeholder="Phone Number" type="tel" name="Patient_Phone_No" tabindex="3" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Email" type="email" name="Patient_Email" tabindex="4" >
+      <input placeholder="City" type="text" name="Patient_City" tabindex="8">
     </fieldset>
     <fieldset>
       <input id="datecss" placeholder="Date of Birth (MM/DD/YY)" type="date" name="Patient_Date_Of_Birth" tabindex="5" required>
@@ -216,31 +216,24 @@ button a{
       <input type="radio" name="Patient_Male" value="Male" required>Male</input>
       <input type="radio" name="Patient_Male" value="Female" required>Female</input>
     </fieldset>
+  
+   
+
     <fieldset>
-     <input placeholder="Street Name" type="text" name="Patient_Street_Name" tabindex="7" >
+      <legend>Enter your account details below:</legend>
+        <input placeholder="Username" type="text" name="Patient_Username" tabindex="1" required autofo
+    </fieldset>
+      <fieldset>
+      <input placeholder="Email" type="email" name="Patient_Email" tabindex="4" >
+    </fieldset>
+  
+    <fieldset>
+     <input id="pass" placeholder="Password" type="password" name="Patient_Password" tabindex="2" required>
     </fieldset>
     <fieldset>
-      <input placeholder="City" type="text" name="Patient_City" tabindex="8">
+     <input id="pass" placeholder="Password Again" type="password" name="Patient_Password" tabindex="2" required>
     </fieldset>
-</label><select class="label1" name="country" id="country"><option value="united-states">United States</option>
-    <option value="afghanistan">Afghanistan</option><option value="aland-islands">Aland Islands</option>
-    <option value="albania">Albania</option><option value="algeria">Algeria</option><option value="american-samoa">American Samoa</option>
-    <option value="andorra">Andorra</option><option value="angola">Angola</option><option value="anguilla">Anguilla</option>
-    <option value="antarctica">Antarctica</option><option value="antigua-and-barbuda">Antigua and Barbuda</option>
-    <option value="argentina">Argentina</option><option value="armenia">Armenia</option><option value="aruba">Aruba</option>
-    <option value="australia">Australia</option><option value="austria">Austria</option><option value="azerbaijan">Azerbaijan</option>
-    <option value="bahamas">Bahamas</option><option value="bahrain">Bahrain</option><option value="bangladesh">Bangladesh</option>
-    <option value="barbados">Barbados</option><option value="belarus">Belarus</option><option value="belgium">Belgium</option>
-    <option value="belize">Belize</option><option value="benin">Benin</option><option value="bermuda">Bermuda</option>
-    <option value="bhutan">Bhutan</option><option value="bolivia">Bolivia</option>
-    <option value="bosnia-and-herzegovina">Bosnia and Herzegovina</option>
-    <option value="botswana">Botswana</option><option value="bouvet-island">Bouvet Island</option><option value="brazil">Brazil</option>
-    <option value="british-indian-ocean-territory">British Indian Ocean Territory</option>
-    <option value="brunei-darussalam">Brunei Darussalam</option>
-    <option value="bulgaria">Bulgaria</option><option value="burkina-faso">Burkina Faso</option><option value="burundi">Burundi</option>
-    <option value="cambodia">Cambodia</option><option value="cameroon">Cameroon</option>
-    <option value="canada">Canada</option><option value="cape-verde">Cape Verde</option><option value="cayman-islands">Cayman Islands</option>
-    </select></label>
+   
     <fieldset style="margin-top : 15px">
     <input type="submit" name="submit" value="Create an account"/>
     </fieldset>
