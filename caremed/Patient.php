@@ -30,7 +30,7 @@ include("header.php");
 		<div class="home">
 			<div class="home_slider_container">
 				<!-- Slider Progress -->
-				<div class="home_slider_progress">sdfdsfsdfs</div>
+				<div class="home_slider_progress"></div>
 			</div>
 			
 
