@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE  html>
 <html>
 <head>
@@ -22,8 +24,13 @@ body {
   font-weight: 100;
   font-size: 12px;
   line-height: 30px;
-  color: #777;
+  color: black;
   background: #283290;
+  background: url(image.jpg);
+  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
+    url(image.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
@@ -44,6 +51,9 @@ body {
 
 #contact {
   background: #F9F9F9;
+  background-color: transparent !important;
+  color:white;
+  font-size: 20px;
   padding: 25px;
   margin: 60px 0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5), 0 5px 5px 0 rgba(0, 0, 0, 0.5);
@@ -146,6 +156,7 @@ a:hover
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  background-color: transparent !important;
 }
 .button2 {background-color: #283290;} /* Blue */
 .button a:hover
@@ -178,7 +189,7 @@ button a{
 <body>
     <button class="button button2"><a href="../index.php">HOME</a></button>
 <div class="container">  
-  <form id="contact" action="" method="post">
+  <form id="contact" action="validation.php" method="post">
     <h3 style="color:#4682B4; text-align: center">Login</h3>
     
     <fieldset>
