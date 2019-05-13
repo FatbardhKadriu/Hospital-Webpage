@@ -1,3 +1,45 @@
+<?php
+session_start();
+$conn = mysqli_connect("localhost", "root", "root");
+mysqli_select_db($conn, 'caremed');
+
+if(isset($_POST['submit']))
+{
+    $Patient_FullName = $_POST['Patient_fullName'];
+    $Patient_Username = $_POST['Patient_Username'];
+    $Patient_Password = md5($_POST['Patient_Password']);
+    $Patient_Email = $_POST['Patient_Email'];
+    $Patient_Adress = $_POST['Patient_Adress'];
+    $Patient_Date_Of_Birth = $_POST['Patient_Date_Of_Birth'];
+    $Patient_Gender = $_POST['gender'];
+    $Patient_City = $_POST['Patient_City'];
+    
+    // $file = fopen("Patient/$Patient_FullName.txt","w+") or die("file not open");
+
+    //  fputs($file,"FullName : ".$Patient_FullName."\nUsername : ".$Patient_Username."\nPassword : ".$Patient_Password
+    //  ."\nEmail : ".$Patient_Email."\nCity : ".$Patient_City."\nAdress : ".$Patient_Adress."\nGender : ".$M) or die("Data not write");
+
+    // fclose($file);
+
+
+$s = "select * from patient where username = '$Patient_Username'";
+
+$result = mysqli_query($conn, $s);
+
+$num = mysqli_num_rows($result);
+
+if($num == 1){
+  echo "<h1>Username already taken</h1>";
+}
+else{
+  $reg="insert into patient(fullName,username,address,city,gender,email,password) values('$Patient_FullName','$Patient_Username','$Patient_Adress','$Patient_City','$Patient_Gender','$Patient_Email','$Patient_Password')";
+  mysqli_query($conn, $reg);
+  echo "Registration successful";
+}
+}
+
+?>
+
 <!DOCTYPE  html>
 <html>
 <head>
@@ -213,8 +255,8 @@ button a{
     </fieldset>
     <fieldset>
     Gender   
-      <input type="radio" name="Patient_Male" value="Male" required>Male</input>
-      <input type="radio" name="Patient_Male" value="Female" required>Female</input>
+      <input type="radio" name="gender" value="Male" >Male</input>
+      <input type="radio" name="gender" value="Female">Female</input>
     </fieldset>
   
    
@@ -242,24 +284,3 @@ button a{
 </div>
 </body>
 </html>
-<?php
-if(isset($_POST['submit']))
-{
-    $Patient_FullName = $_POST['Patient_fullName'];
-    $Patient_Username = $_POST['Patient_Username'];
-    $Patient_Password = $_POST['Patient_Password'];
-    $Patient_Email = $_POST['Patient_Email'];
-    $Patient_Adress = $_POST['Patient_Adress'];
-    $Patient_Date_Of_Birth = $_POST['Patient_Date_Of_Birth'];
-    $M = $_POST['Patient_Male'];
-    $F = $_POST['Patient_Female'];
-    $Patient_City = $_POST['Patient_City'];
-    
-    $file = fopen("Patient/$Patient_FullName.txt","w+") or die("file not open");
-
-     fputs($file,"FullName : ".$Patient_FullName."\nUsername : ".$Patient_Username."\nPassword : ".$Patient_Password
-     ."\nEmail : ".$Patient_Email."\nCity : ".$Patient_City."\nAdress : ".$Patient_Adress."\nGender : ".$M.$F) or die("Data not write");
-
-    fclose($file);
-}
-?>
