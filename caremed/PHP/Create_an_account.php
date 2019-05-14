@@ -78,6 +78,7 @@ body {
   width: 100%;
   margin: 0 auto;
   position: relative;
+  font-size:16px;
 }
 
 #contact input[type="text"],
@@ -231,6 +232,10 @@ button a{
   color: white;
   text-decoration: none;
 }
+a:hover
+{
+  color : #20d34a;
+}
 
     </style>
 </head>
@@ -279,6 +284,10 @@ button a{
     <fieldset style="margin-top : 15px">
     <input type="submit" name="submit" value="Create an account"/>
     </fieldset>
+    <div style="text-align:right">
+    <p>Do you have an account?</p>
+    <p><a href="Login.php">Sign in</a></p>
+    </div>
 
   </form>
 </div>
