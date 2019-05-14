@@ -1,7 +1,9 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost", "root", "root");
-mysqli_select_db($conn, 'caremed');
+
+require_once('config.php');
+$conn = mysqli_connect($db_host, $db_username, $db_password);
+mysqli_select_db($conn, $db_name);
 
 if(isset($_POST['submit']))
 {
@@ -247,16 +249,16 @@ a:hover
     
     <fieldset>
       <legend>Enter your personal details below:</legend>
-      <input placeholder="Full Name" type="text" name="Patient_fullName" tabindex="1" required autofocus>
+      <input placeholder="Full Name" type="text" name="Patient_fullName"  required autofocus>
     </fieldset>
     <fieldset>
-     <input placeholder="Adress" type="text" name="Patient_Adress" tabindex="7" >
+     <input placeholder="Adress" type="text" name="Patient_Adress"  >
     </fieldset>
     <fieldset>
-      <input placeholder="City" type="text" name="Patient_City" tabindex="8">
+      <input placeholder="City" type="text" name="Patient_City" >
     </fieldset>
     <fieldset>
-      <input id="datecss" placeholder="Date of Birth (MM/DD/YY)" type="date" name="Patient_Date_Of_Birth" tabindex="5" required>
+      <input id="datecss" placeholder="Date of Birth (MM/DD/YY)" type="date" name="Patient_Date_Of_Birth"  required>
     </fieldset>
     <fieldset>
     Gender   
@@ -268,17 +270,17 @@ a:hover
 
     <fieldset>
       <legend>Enter your account details below:</legend>
-        <input placeholder="Username" type="text" name="Patient_Username" tabindex="1" required autofo
+        <input placeholder="Username" type="text" name="Patient_Username"  required autofo
     </fieldset>
       <fieldset>
-      <input placeholder="Email" type="email" name="Patient_Email" tabindex="4" >
+      <input placeholder="Email" type="email" name="Patient_Email" >
     </fieldset>
   
     <fieldset>
-     <input id="pass" placeholder="Password" type="password" name="Patient_Password" tabindex="2" required>
+     <input id="pass" placeholder="Password" type="password" name="Patient_Password" required>
     </fieldset>
     <fieldset>
-     <input id="pass" placeholder="Password Again" type="password" name="Patient_CPassword" tabindex="2" required>
+     <input id="pass" placeholder="Password Again" type="password" name="Patient_CPassword" required>
     </fieldset>
    
     <fieldset style="margin-top : 15px">
