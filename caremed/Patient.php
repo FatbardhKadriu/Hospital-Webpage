@@ -247,7 +247,7 @@ include("header.php");
 										alt=""></div>
 							</div>
 							<div class="box_title">Emergency Cases</div>
-							<div class="box_phone">+56 273 45678 235</div>
+							<div class="box_phone">+563 47558 623</div>
 							<div class="box_emergency_text">For any emergencies please call the number up above.</div>
 						</div>
 					</div>

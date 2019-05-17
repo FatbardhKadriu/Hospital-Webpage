@@ -51,22 +51,25 @@ require("header.php");
 
 				<!-- About Content -->
 				<div class="col-lg-8">
-					<div class="section_title"><h2>A great medical team to help your needs</h2></div>
+					<div class="section_title"><h2>ABOUT US</h2></div>
 					<div class="about_text">
-						<p>The primary-care physician suggested a different kind of angiogram, one that did not require a catheter but
-							 instead used multiple x-rays to image arteries. That test revealed an artery that was partially blocked by plaque, 
-							 and though the man’s heart was pumping blood normally, the test was incapable of determining whether the blockage was
-							  dangerous. Still, his primary-care doctor, like the cardiologist at the emergency room, suggested that the executive have an 
-							  angiogram with a catheter, likely followed by a procedure to implant a stent. The man set up an appointment with the cardiologist
-							  he was referred to for the catheterization, but when he tried to contact that doctor directly ahead of time, he was told the 
-							  doctor wouldn’t be available prior to the procedure. And so the executive sought yet another opinion. That’s when he found Dr.
-							   David L. Brown, a professor in the cardiovascular division of the Washington University School of Medicine in St. Louis. The 
-							   executive told Brown that he’d felt pressured by the previous doctors and wanted more information. He was willing to try all 
-							   manner of noninvasive treatments—from 
-							a strict diet to retiring from his stressful job—before having a stent implanted.</p>
-						<p>Praesent luctus erat sit amet tortor aliquam bibendum. Nulla ut molestie augue, scelerisque consectetur quam. Dolor sit amet,
-							 consectetur adipiscing elit. Cura bitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam consequat semper 
-							 sollicitudin. Aliquam nec dapibus massa. Pellentesque in luctus ex.</p>
+						<p>The CareMed Hospital is a 254-bed, acute care, general medical/surgical private hospital
+						 with a multi-specialty physician group practice, designed to provide a high quality, American standard
+						  of healthcare to meet the needs and exceed the expectations of the people of Dubai, the UAE and the surrounding Gulf States.</p>
+						<p>The CareMed Hospital became the first hospital in the Middle East to be awarded JCI accreditation in May 2000 
+						and has successfully maintained its accreditation seven times. The Laboratory of the CareMed Hospital Dubai was the first 
+						private lab in the Middle East to earn accreditation by the College of American Pathologists (CAP) and was accredited for 
+						the ninth consecutive time in 2017.</p>
+						<p>The CareMed Hospital has continued to expand to meet the demand for more personalized services, comfort and convenience,
+						 while broadening the services and deepening the level of expertise and care offered.</p>
+						<p>Our Cancer program was first in Dubai to offer comprehensive one-stop services. Our Heart Center has added electrophysiology 
+						consultation to our list of state of the art services. Our Orthopedics team is ready to serve a growing patient population in need of
+						 surgical and inpatient rehabilitation and outpatient physical therapy. Our Endocrinology services are expanding their services to address
+						  the need of diabetes and offers a multidisciplinary approach to thyroid disease management.</p>
+						  <p>In addition, we are focusing on strategic initiatives with increased patient access through expanding our Clinic footprint, investment
+						   in acute stroke care, and integrative and personalized medicine.</p>
+						   <p>In June 2016, the Hospital became the inaugural Middle East member of the prestigious Mayo Clinic Care Network. Our physicians and team 
+						   are able to collaborate and leverage the expertise of Mayo Clinic for the betterment of patients in the UAE and surrounding region.</p>
 					</div>
 					<div class="row loaders_container">
 						<div class="col-md-3 loader_col">

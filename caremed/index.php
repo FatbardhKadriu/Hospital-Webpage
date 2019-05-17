@@ -57,9 +57,7 @@ require("header.php");
 								<div class="col">
 									<div class="home_content_inner">
 										<div class="home_title"><h1>Medicine made with care</h1></div>
-										<div class="home_text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu.</p>
-										</div>
+									
 										<div class="button home_button">
 											<a href="#">read more</a>
 										</div>
@@ -143,7 +141,7 @@ require("header.php");
 					<div class="box box_emergency">
 						<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width: 37px; height:37px; margin-left:-4px;"><img src="images/bell.svg" alt=""></div></div>
 						<div class="box_title">Emergency Cases</div>
-						<div class="box_phone">+56 273 45678 235</div>
+						<div class="box_phone">+563 47558 623</div>
 						<div class="box_emergency_text">For any emergencies please call the number up above.</div>
 					</div>
 				</div>
@@ -334,7 +332,7 @@ Admissions: At the Admitting Department, the patient will be required to provide
 				<div class="col">
 					<div class="cta_content text-center">
 						<h2>Need a personal health plan?</h2>
-						<p>Duis massa massa, mollis vel ullamcorper quis, finibus et urna. Aliquam ac eleifend metus. Ut sollicitudin risus ex</p>
+						<p>At the American Hospital you will find the best service.</p>
 						<div class="button cta_button"><a href="#">request a plan</a></div>
 					</div>
 				</div>
