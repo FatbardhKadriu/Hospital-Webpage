@@ -114,13 +114,10 @@ include("header.php");
 								<p>We would like to inform you that the entire procedure of donation of blood is
 									realized at the National Center of Blood Transfusion and that all the donors,
 									friends or relatives, are obliged to follow the protocol rules of this center,
-									accompanied by the staff of the American Hospital.<br />
+									accompanied by the staff of the American Hospital.<br /><br />
 							</div>
-							<div class="toggle-title arrow "><span class="arrow"></span>Donation of blood</div>
-							<div class="toggle_content ac_content arrow "><strong>Donation of blood can save a
-									life!!!</strong><br />
-
-							</div>
+							
+							
 						</div>
 					</div>
 					<div class="panel panel-default">
@@ -132,6 +129,11 @@ include("header.php");
 						</div>
 						<div id="collapse2" class="panel-collapse collapse">
 							<div class="panel-body">
+						
+							<div class="toggle_content ac_content arrow "><strong>Donation of blood can save a
+									life!!!</strong><br />
+
+							</div>
 								<strong>Donate blood, donate life!</strong></p>
 								<p>Donate blood in the National Blood Transfusion Center in Tirana or in the blood
 									centers of the regional hospitals. Raise the awareness of your relatives and of
@@ -188,7 +190,7 @@ include("header.php");
 									<li>For major operations</li>
 									<li>For surgery emergencies</li>
 									<li>For traumas and accidents</li>
-									<li>For mothers giving birth to their children</li>
+									<li>For mothers giving birth to their children</li><br />
 								</ul>
 							</div>
 						</div>
@@ -246,8 +248,7 @@ include("header.php");
 							</div>
 							<div class="box_title">Emergency Cases</div>
 							<div class="box_phone">+56 273 45678 235</div>
-							<div class="box_emergency_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Curabitur ante leo.</div>
+							<div class="box_emergency_text">For any emergencies please call the number up above.</div>
 						</div>
 					</div>
 
