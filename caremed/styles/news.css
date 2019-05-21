@@ -679,6 +679,10 @@ section
 {
 	margin-top: -2px;
 }
+.myClass
+{
+	width: 550px;
+}
 .breadcrumbs ul li
 {
 	display: inline-block;
