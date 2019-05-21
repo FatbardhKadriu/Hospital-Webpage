@@ -13,6 +13,12 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 </head>
 <body>
 
@@ -39,49 +45,7 @@ require("header.php");
 											<p>The CareMed Hospital (CMH) is open to all patients every day and provides fundamental medical care and cutting-edge medicine in a central location in Zurich. We use our superior academic knowledge to treat a wide range of health issues, taking a personal touch and utilizing highly specialized and up-to-date research.</p>
 										</div>
 										<div class="button home_button">
-											<a href="#">read more</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(images/home_background_1.jpg)"></div>
-					<div class="home_content">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_content_inner">
-										<div class="home_title"><h1>Medicine made with care</h1></div>
-									
-										<div class="button home_button">
-											<a href="#">read more</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(images/home_background_1.jpg)"></div>
-					<div class="home_content">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_content_inner">
-										<div class="home_title"><h1>Medicine made with care</h1></div>
-										<div class="home_text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu.</p>
-										</div>
-										<div class="button home_button">
-											<a href="#">read more</a>
+											<a href="about.php">read more</a>
 										</div>
 									</div>
 								</div>
@@ -105,44 +69,37 @@ require("header.php");
 				
 				<!-- Box -->
 				<div class="col-lg-4 box_col">
-					<div class="box working_hours">
-						<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width:29px; height:29px;"><img src="images/alarm-clock.svg" alt=""></div></div>
-						<div class="box_title">Working Hours</div>
-						<div class="working_hours_list">
-							<ul>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>Monday – Friday</div>
-									<div class="ml-auto">8.00 – 19.00</div>
-								</li>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>Saturday</div>
-									<div class="ml-auto">9.30 – 17.00</div>
-								</li>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>Sunday</div>
-									<div class="ml-auto">9.30 – 15.00</div>
-								</li>
-							</ul>
-						</div>
+					<div class="box box_appointments">
+						
+					<i class="fa fa-user-md" style="font-size:48px;color:red"></i><br>
+						<div class="box_title">Doctors Login</div>
+						<div class="box_text">Log in to your doctor account!</div>
+						<div class="button" style='margin-top:10%;'><span><a href="hms/user-login.php">Click Here</a></span></div>
 					</div>
 				</div>
 
 				<!-- Box -->
 				<div class="col-lg-4 box_col">
 					<div class="box box_appointments">
-						<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width: 29px; height:29px;"><img src="images/phone-call.svg" alt=""></div></div>
-						<div class="box_title">Appointments</div>
-						<div class="box_text">All appointments are prioritized on the basis of medical need, and the team members who will care for you or your family have the expertise and skills to provide the best care possible.</div>
+						
+					<i class='fas fa-users' style='font-size:30px;color:red'></i><br>
+						<div class="box_title">Patients</div>
+						<div class="box_text" style='margin-top:-1%;font-size:13px;'>Dear patients, here you can book appointments to our hospital, but
+								first you have to create an account and then use it with your username
+								and password!</div>
+						<div class="button" style='margin-top:-1%;'><span><a href="hms/user-login.php">Click Here</a></span></div>
+						
 					</div>
 				</div>
 
 				<!-- Box -->
 				<div class="col-lg-4 box_col">
-					<div class="box box_emergency">
-						<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width: 37px; height:37px; margin-left:-4px;"><img src="images/bell.svg" alt=""></div></div>
-						<div class="box_title">Emergency Cases</div>
-						<div class="box_phone">+563 47558 623</div>
-						<div class="box_emergency_text">For any emergencies please call the number up above.</div>
+					<div class="box box_appointments">
+						
+					<i class='fas fa-id-card-alt' style='font-size:48px;color:red'></i><br>
+						<div class="box_title">Admin Login</div>
+						<div class="box_text">Sign in to your admin account!</div>
+						<div class="button" style='margin-top:10%;'><span><a href="hms/user-login.php">Click Here</a></span></div>
 					</div>
 				</div>
 
