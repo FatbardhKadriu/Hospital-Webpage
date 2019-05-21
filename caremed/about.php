@@ -32,7 +32,7 @@ require("header.php");
 							<div class="home_title">About <span>CareMed</span></div>
 							<div class="breadcrumbs">
 								<ul>
-									<li><a href="#">Home</a></li>
+									<li><a href="index.php">Home</a></li>
 									<li>About Caremed</li>
 								</ul>
 							</div>
@@ -70,24 +70,6 @@ require("header.php");
 						   in acute stroke care, and integrative and personalized medicine.</p>
 						   <p>In June 2016, the Hospital became the inaugural Middle East member of the prestigious Mayo Clinic Care Network. Our physicians and team 
 						   are able to collaborate and leverage the expertise of Mayo Clinic for the betterment of patients in the UAE and surrounding region.</p>
-					</div>
-					<div class="row loaders_container">
-						<div class="col-md-3 loader_col">
-							<!-- Loader -->
-							<div class="loader" data-perc="0.75"><span>Hard Work</span></div>
-						</div>
-						<div class="col-md-3 loader_col">
-							<!-- Loader -->
-							<div class="loader" data-perc="0.95"><span>Passion</span></div>
-						</div>
-						<div class="col-md-3 loader_col">
-							<!-- Loader -->
-							<div class="loader" data-perc="0.75"><span>Hard Work</span></div>
-						</div>
-						<div class="col-md-3 loader_col">
-							<!-- Loader -->
-							<div class="loader" data-perc="0.95"><span>Passion</span></div>
-						</div>
 					</div>
 			
 				</div>
