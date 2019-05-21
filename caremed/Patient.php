@@ -28,17 +28,59 @@ include("header.php");
 		<!-- Home -->
 
 		<div class="home">
+			
 			<div class="home_slider_container">
 				<!-- Slider Progress -->
-				<div class="home_slider_progress"></div>
-			</div>
-			
 
+				<div class="home_slider_progress"></div>
+				
+			</div>
+			<div class="home_slider_background" style="background-image:url(images/home_background_1.jpg)"></div>		
+			<div class="myClass" width="550px" style="margin-top: -44%">
+			<style>
+#mySidenav a {
+  position: absolute;
+  right: 970px;
+  transition: 0.3s;
+  padding: 12px;
+  width: 250px;
+  height : 52px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+}
+
+#mySidenav a:hover {
+  left: 145px;
+}
+
+#about {
+  top: 20px;
+  background-color: #283290;
+}
+
+#blog {
+  top: 80px;
+  background-color: #283290;
+}
+
+
+</style>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="PHP/Login.php" id="about">Login</a>
+  <a href="PHP/Create_an_account.php" id="blog">Create an account</a>
+</div>
+
+		</div>
 		</div>
 
 		<!-- 3 Boxes -->
 
-		<div class="boxes" style="margin-top: -35%">
+		<div class="boxes" style="margin-top: -25%">
 			<div class="container">
 			<h3>Inpatient Department</h3>
 				<div class="ac_wrap animated  wow fadeIn" id="accordion" style="padding-bottom: 5%">
