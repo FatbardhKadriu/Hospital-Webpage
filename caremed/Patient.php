@@ -38,9 +38,10 @@ include("header.php");
 
 		<!-- 3 Boxes -->
 
-		<div class="boxes" style="margin-top: -10%">
+		<div class="boxes" style="margin-top: -35%">
 			<div class="container">
-				<div class="panel-group" id="accordion" style="padding-bottom: 5%">
+			<h3>Inpatient Department</h3>
+				<div class="ac_wrap animated  wow fadeIn" id="accordion" style="padding-bottom: 5%">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">
@@ -49,7 +50,7 @@ include("header.php");
 						</div>
 						<div id="collapse1" class="panel-collapse collapse">
 							<div class="panel-body">
-								<h3>Inpatient Department</h3>
+								
 								<strong>Information on the hospitalization of patients at the American
 									Hospital</strong><br />
 								1. In order to accept a patient at the hospital, there is a need for a medical
