@@ -258,9 +258,6 @@ include("header.php");
 				<div class="col-lg-3 col-md-6 dept_col">
 					<div class="dept">
 						<div class="dept_text">
-							<p>A paragraph............................
-								............................
-							</p>
 						</div>
 						<div class="button dept_button"><a href="#">read more</a></div>
 					</div>
