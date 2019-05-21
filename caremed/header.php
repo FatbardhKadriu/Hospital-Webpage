@@ -46,7 +46,7 @@
 								<ul>
 									<li><a href="index.php">Home</a></li>
 									<li><a href="about.php">About us</a></li>
-									<li><a href="#">Doctors</a></li>
+									<li><a href="Doctors.php">Doctors</a></li>
 									<li><a href="services.php">Services</a></li>
 									<li><a href="Patient.php">Patient</a></li>
 									<li><a href="contact.php">Contact</a></li>
@@ -98,7 +98,7 @@
 				<ul class="menu_list menu_mm">
 					<li class="menu_item menu_mm"><a href="index.php">Home</a></li>
                     <li class="menu_item menu_mm"><a href="about.php">About us</a></li>
-                    <li class="menu_item menu_mm"><a href="#">Doctors</a></li>
+                    <li class="menu_item menu_mm"><a href="Doctors.php">Doctors</a></li>
 					<li class="menu_item menu_mm"><a href="services.php">Services</a></li>
 					<li class="menu_item menu_mm"><a href="Patient.php">Patient</a></li>
 					<li class="menu_item menu_mm"><a href="contact.php">Contact</a></li>

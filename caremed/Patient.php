@@ -40,7 +40,7 @@ include("header.php");
 			<style>
 #mySidenav a {
   position: absolute;
-  right: 970px;
+  left: 50px;
   transition: 0.3s;
   padding: 12px;
   width: 250px;
@@ -53,7 +53,7 @@ include("header.php");
 }
 
 #mySidenav a:hover {
-  left: 145px;
+  left: 57px;
 }
 
 #about {
@@ -309,7 +309,7 @@ include("header.php");
 
 
 
-		<?php
+<?php
 require("footer.php");
 ?>
 
