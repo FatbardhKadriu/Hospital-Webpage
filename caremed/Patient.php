@@ -53,7 +53,7 @@ include("header.php");
 }
 
 #mySidenav a:hover {
-  left: 55px;
+  left: 57px;
 }
 
 #about {

@@ -39,7 +39,7 @@ include("header.php");
 												
 													#mySidenav a {
 													  position: absolute;
-													  left: 35px;
+													  left: 0px;
 													  transition: 0.3s;
 													  padding: 12px;
 													  width: 250px;
@@ -52,7 +52,7 @@ include("header.php");
 													}
 													
 													#mySidenav a:hover {
-													  left: 55px;
+													  left: 7px;
 													  border-radius: 60%;
 													}
 													
