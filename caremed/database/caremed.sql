@@ -49,7 +49,7 @@ INSERT INTO `doctors` (`id`, `specilization`, `doctorName`, `address`, `docFees`
 (2, 'physiotherapist', 'Doctor 2', 'Address 2', '600', 045333444, 'doc2@gmail.com', '123456', ''),
 (3, 'General Physician', 'Doctor 3', 'Address 3', '1200', 045323123, 'doc3@gmail.com', '123456', ''),
 (4, 'Othorino-laringologist', 'Doctor 4', 'Address 4', '700', 045123211, 'doc4@gmail.com', '123456', ''),
-(5, 'Dermatologist', 'Sanjeev', 'Doctor 5', 'Address 5', 045444111, 'doc5@gmail.com', '123456', ''),
+(5, 'Dermatologist', 'Doctor 5', 'Address 5', '900', 045444111, 'doc5@gmail.com', '123456', ''),
 (6, 'General Physician', 'Doctor 6', 'Address 6', '2500', 044191919, 'doc6@gmail.com', '123456', '');
 
 CREATE TABLE `doctorslog` (
