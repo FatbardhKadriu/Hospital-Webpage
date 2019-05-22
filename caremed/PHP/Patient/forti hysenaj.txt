@@ -1,8 +1,0 @@
-Patient
-Name :forti
-Surname is : hysenaj
-Username : fortesa
-Password : 1234
-Phone Number : 3456
-Email : fortesa@hotmail.com
-Date Of Birth : 1999-01-02
