@@ -32,7 +32,7 @@ require("header.php");
 							<div class="home_title"><span>CareMed</span> News</div>
 							<div class="breadcrumbs">
 								<ul>
-									<li><a href="#">Home</a></li>
+									<li><a href="index.php">Home</a></li>
 									<li>Contact</li>
 								</ul>
 							</div>

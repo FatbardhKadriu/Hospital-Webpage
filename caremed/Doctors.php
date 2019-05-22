@@ -164,7 +164,7 @@ include("header.php");
 					<div class="box box_appointments">
 						<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width: 29px; height:29px;"><img src="images/phone-call.svg" alt=""></div></div>
 						<div class="box_title">Appointments</div>
-						<div class="box_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo, finibus quis est ut, tempor tincidunt ipsum. Nam cons equat semper sollicitudin.</div>
+						<div class="box_text">All appointments are prioritized on the basis of medical need, and the team members who will care for you or your family have the expertise and skills to provide the best care possible.</div>
 					</div>
 				</div>
 
@@ -174,7 +174,7 @@ include("header.php");
 						<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width: 37px; height:37px; margin-left:-4px;"><img src="images/bell.svg" alt=""></div></div>
 						<div class="box_title">Emergency Cases</div>
 						<div class="box_phone">+56 273 45678 235</div>
-						<div class="box_emergency_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ante leo.</div>
+						<div class="box_emergency_text">For any emergencies please call the number up above.</div>
 					</div>
 				</div>
 
@@ -367,7 +367,7 @@ include("header.php");
 				<div class="col">
 					<div class="cta_content text-center">
 						<h2>Need a personal health plan?</h2>
-						<p>Duis massa massa, mollis vel ullamcorper quis, finibus et urna. Aliquam ac eleifend metus. Ut sollicitudin risus ex</p>
+				
 						<div class="button cta_button"><a href="#">request a plan</a></div>
 					</div>
 				</div>

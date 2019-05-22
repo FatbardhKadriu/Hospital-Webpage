@@ -27,7 +27,7 @@ CREATE TABLE appointment(
   postingDate timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   userStatus int(11) NOT NULL,
   doctorStatus int(11) NOT NULL,
-  updationDate varchar(255) NOT NULL
+  updationDate timestamp DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 INSERT INTO `appointment` (`id`, `doctorSpecialization`, `doctorId`, `userId`, `consultancyFees`, `appointmentDate`, `appointmentTime`, `postingDate`, `userStatus`, `doctorStatus`, `updationDate`) VALUES
