@@ -71,8 +71,8 @@ include("header.php");
 </div>
 
 <div id="mySidenav" class="sidenav">
-  <a href="PHP/Login.php" id="about">Login</a>
-  <a href="PHP/Create_an_account.php" id="blog">Create an account</a>
+  <a href="Patient/user-login.php" id="about">Login</a>
+  <a href="Patient/registration.php" id="blog">Create an account</a>
 </div>
 
 		</div>

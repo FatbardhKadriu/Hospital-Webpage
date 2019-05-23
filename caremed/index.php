@@ -74,7 +74,7 @@ require("header.php");
 					<i class="fa fa-user-md" style="font-size:48px;color:red"></i><br>
 						<div class="box_title">Doctors Login</div>
 						<div class="box_text">Log in to your doctor account!</div>
-						<div class="button" style='margin-top:10%;'><span><a href="hms/user-login.php">Click Here</a></span></div>
+						<div class="button" style='margin-top:10%;'><span><a href="#">Click Here</a></span></div>
 					</div>
 				</div>
 
@@ -87,7 +87,7 @@ require("header.php");
 						<div class="box_text" style='margin-top:-1%;font-size:13px;'>Dear patients, here you can book appointments to our hospital, but
 								first you have to create an account and then use it with your username
 								and password!</div>
-						<div class="button" style='margin-top:-1%;'><span><a href="hms/user-login.php">Click Here</a></span></div>
+						<div class="button" style='margin-top:-1%;'><span><a href="Patient/user-login.php">Click Here</a></span></div>
 						
 					</div>
 				</div>
@@ -99,7 +99,7 @@ require("header.php");
 					<i class='fas fa-id-card-alt' style='font-size:48px;color:red'></i><br>
 						<div class="box_title">Admin Login</div>
 						<div class="box_text">Sign in to your admin account!</div>
-						<div class="button" style='margin-top:10%;'><span><a href="hms/user-login.php">Click Here</a></span></div>
+						<div class="button" style='margin-top:10%;'><span><a href="#">Click Here</a></span></div>
 					</div>
 				</div>
 
