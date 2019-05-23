@@ -27,56 +27,7 @@ include("header.php");
 			<div class="owl-carousel owl-theme home_slider">
 				
 				<!-- Slider Item -->
-				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(images/home_background_1.jpg)"></div>
-					<div class="home_content">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_content_inner">
-										
-											<style>
-												
-													#mySidenav a {
-													  position: absolute;
-													  left: 0px;
-													  transition: 0.3s;
-													  padding: 12px;
-													  width: 250px;
-													  height: 52px;
-													  text-decoration: none;
-													  font-size: 18px;
-													  color: white;
-													  border-radius: 50%;
-													  text-align: center;
-													}
-													
-													#mySidenav a:hover {
-													  left: 7px;
-													  border-radius: 60%;
-													}
-													
-													#about {
-													  top: 20px;
-													  background-color: #283290;
-													}
 
-													
-													</style>
-													
-													<div id="mySidenav" class="sidenav">
-													  <a href="PHP/Login.php" id="about">Login</a>
-													  
-													</div>
-													
-													
-										
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
 				<!-- Slider Item -->
 				<div class="owl-item">
