@@ -58,11 +58,11 @@ $msg="Your email updated Successfully";
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">User | Edit Profile</h1>
+									<h1 class="mainTitle">Patient | Edit Profile</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
-										<span>User </span>
+										<span>Patient </span>
 									</li>
 									<li class="active">
 										<span>Edit Profile</span>
