@@ -27,7 +27,19 @@
 						
 							<li class="dropdown current-user">
 								<a href class="dropdown-toggle" data-toggle="dropdown">
-									<img src="assets/images/man.png" alt="Patient"> <span class="username">
+								<?php
+									if($_SESSION['gender'] == "male")
+									{
+										?>
+									<img src="assets/images/man.png" alt="Man"> <span class="username">
+								<?php
+									}
+									else if($_SESSION['gender'] == "female")
+									{
+										?>
+									<img src="assets/images/woman.png" alt="Woman"> <span class="username">
+								<?php
+									}?>
 
 									<?php $query=mysqli_query($con,"select fullName from users where id='".$_SESSION['id']."'");
 while($row=mysqli_fetch_array($query))

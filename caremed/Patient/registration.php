@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('include/config.php');
 if(isset($_POST['submit']))
 {
@@ -6,7 +7,6 @@ $fname=$_POST['full_name'];
 $address=$_POST['address'];
 $city=$_POST['city'];
 $gender=$_POST['gender'];
-$_SESSION['gender'] = $gender;
 $email=$_POST['email'];
 $password=$_POST['password'];
 $query=mysqli_query($con,"insert into users(fullname,address,city,gender,email,password) values('$fname','$address','$city','$gender','$email','$password')");
