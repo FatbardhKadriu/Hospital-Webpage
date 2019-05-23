@@ -9,11 +9,12 @@ $city=$_POST['city'];
 $gender=$_POST['gender'];
 $email=$_POST['email'];
 $password=$_POST['password'];
+$_SESSION['fullName'] = $fname;
 $query=mysqli_query($con,"insert into users(fullname,address,city,gender,email,password) values('$fname','$address','$city','$gender','$email','$password')");
 if($query)
 {
-	echo "<script>alert('Successfully Registered. You can login now');</script>";
-	//header('location:user-login.php');
+	// echo "<script>alert('Successfully Registered. You can login now');</script>";
+	header('location: registrationSuccessful.php');
 }
 }
 ?>
