@@ -28,7 +28,7 @@ class DoctorClass
 
     public function showMain()
     {
-        include("DocHTML.html");   
+        include("DocMain.php");   
     }
     
     public function showFooter()
