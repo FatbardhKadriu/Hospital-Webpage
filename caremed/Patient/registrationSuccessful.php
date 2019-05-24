@@ -19,12 +19,17 @@
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		
 		<style>
 		body{
-			background:url(bg.jpg);
+			background:url(0.jpg);
 			background-repeat:no-repeat;
 			background-size:cover;
+			margin-left:-50px;
 			background-position:center;
 		}
 		.form-login{
@@ -55,15 +60,16 @@
 									<div class="home_content_inner">
 									<?php
     session_start();
-    echo "<h1>Welcome ".$_SESSION['fullName']."</h1>";
-    echo "<h1>You have successfully registered on CareMed!</h1>";
+    echo "<h2>Welcome to Caremed ".$_SESSION['fullName']." !</h2>";
+    echo "<h1>Thank you for your registration!</h1>";
 
                                     ?>
 										<div class="home_text">
-											<p>Welcome to CareMed!</p>
+											<p>Now you can LogIn here!</p>
 										</div>
 										<div class="button home_button">
-											<a href="user-login.php">LogIn</a>
+										<a href="user-login.php" class="btn btn-info" role="button">Get started</a>
+										
 										</div>
 									</div>
 								</div>
