@@ -31,11 +31,11 @@ class DoctorClass
         include("DocHTML.html");   
     }
     
-/*    public function showFooter()
+    public function showFooter()
     {
-        include("footer.php");
+        include("../footer.php");
     }
-*/
+
     public function showContent()
     {
         echo "<html> <head>";
@@ -45,7 +45,7 @@ class DoctorClass
         echo "</head><body>";
         $this->showHeader();
         $this->showMain();
-//        $this->showFooter();
+        $this->showFooter();
 
         echo "</body></html>";
         
