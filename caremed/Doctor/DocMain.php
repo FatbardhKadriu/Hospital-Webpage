@@ -1,12 +1,7 @@
 <?php
 session_start();
-$con = mysqli_connect("localhost", "root", "bardhi", "caremed");
 
-if(!$con)
-{
-    echo "Error: ".mysqli_error($con);
-}
-
+include('include/config.php');
 $query = "Select * from doctors";
 
 $result = mysqli_query($con,$query);
