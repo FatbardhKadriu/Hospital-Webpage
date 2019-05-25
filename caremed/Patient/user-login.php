@@ -44,6 +44,7 @@ exit();
 <html lang="en">
 	<head>
 		<title>Patient-Login</title>
+
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -62,10 +63,12 @@ exit();
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
 		<style>
 		body{
-			background:url(bg.jpg);
+			background:url(caremed.jpg);
 			background-repeat:no-repeat;
 			background-size:cover;
-			background-position:center;
+			margin-left:-180px;
+			background-attachment: fixed;
+			background-position:cover;
 		}
 		.form-login{
 			background-color: transparent !important;
@@ -77,7 +80,8 @@ exit();
 		<div class="row" style="margin-top:50px;">
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
-				<a href="#"><h2> Patient Login</h2></a>
+				<a href="#"><h1 style="color:black;"> Patient Login</h1></a>
+
 				</div>
 
 				<div class="box-login" style="width:450px;">
