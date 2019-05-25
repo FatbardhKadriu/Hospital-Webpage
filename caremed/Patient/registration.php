@@ -46,7 +46,7 @@ if($query)
 		body{
 			background:url(caremed.jpg);
 			background-repeat:no-repeat;
-			margin-left:-180px;
+			margin-left:20px;
 			background-size:cover;
 			background-attachment: fixed;
 			background-position:cover;
@@ -64,7 +64,7 @@ if($query)
 		<div class="row">
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
-				<h1 style="color:black;">Patient Registration</h1>
+				<h1 style="color: #000000; font-size: 50px;">Patient Registration</h1>
 				</div>
 				<!-- start: REGISTER BOX -->
 				<div class="box-register">

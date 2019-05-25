@@ -66,7 +66,8 @@ exit();
 			background:url(caremed.jpg);
 			background-repeat:no-repeat;
 			background-size:cover;
-			margin-left:-180px;
+			margin-left:20px;
+			margin-top:-60px;
 			background-attachment: fixed;
 			background-position:cover;
 		}
@@ -80,7 +81,7 @@ exit();
 		<div class="row" style="margin-top:50px;">
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
-				<h1 style="color:black;"> Patient Login</h1>
+				<h1 style="color: #000000; font-size: 50px;"> Patient Login</h1>
 
 				</div>
 
