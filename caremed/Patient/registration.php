@@ -64,7 +64,7 @@ if($query)
 		<div class="row">
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
-				<a href="#"><h1 style="color:black;">Patient Registration</h1></a>
+				<h1 style="color:black;">Patient Registration</h1>
 				</div>
 				<!-- start: REGISTER BOX -->
 				<div class="box-register">
@@ -116,7 +116,7 @@ if($query)
 							</div>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="password" class="form-control" name="password_again" placeholder="Password Again" required>
+									<input type="password" class="form-control" name="password_again" placeholder="Confirm Password" required>
 									<i class="fa fa-lock"></i> </span>
 							</div>
 							

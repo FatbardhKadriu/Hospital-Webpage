@@ -47,7 +47,6 @@
 									<li><a href="index.php">Home</a></li>
 									<li><a href="about.php">About us</a></li>
 									<li><a href="Doctor/Doctors.php">Doctors</a></li>
-									<li><a href="services.php">Services</a></li>
 									<li><a href="Patient.php">Patient</a></li>
 									<li><a href="contact.php">Contact</a></li>
 								</ul>

@@ -80,7 +80,7 @@ exit();
 		<div class="row" style="margin-top:50px;">
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
-				<a href="#"><h1 style="color:black;"> Patient Login</h1></a>
+				<h1 style="color:black;"> Patient Login</h1>
 
 				</div>
 
