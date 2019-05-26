@@ -5,8 +5,9 @@
 </head>
 <body style="background-color: lightblue;font-size: 30px;">
 <img src="hangman.png" style="position: absolute; left: 480px;">
+<link rel="stylesheet" type="text/css" href="button.css">
 
-<div style="position: absolute; top: 250px; left: 480px;">
+<div style="position: absolute; top: 250px; left: 480px; font-family: sans-serif;">
 <?php 
 
 	session_start(); 
@@ -32,7 +33,7 @@
 	}
 
 	if ($guessLength < strlen($word) && $hangman < 6) { 
-		$message = "The game's not over yet...";
+		$message = "";
 		$match = false;
 		$guess = isset($_POST['guess']) ? $_POST['guess'][0] : '';
 
@@ -92,13 +93,14 @@
 		header("Location: hangman.php");
 	}}
 ?>
-
+<div class="form-style-6">
 <form method="post">
 	Pick a letter... <br><input type="text" name="guess" maxlength="1" />
 	<br>
 	<input type="submit" value="Guess!" />
 	<input type="submit" value="New Game" name="restart" />
 </form>
+</div>
 <?php
 for ($i = 0; $i < $hangman; $i++) {
 	echo $hangmanImage[$i];
