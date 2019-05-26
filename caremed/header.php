@@ -49,6 +49,7 @@
 									<li><a href="docMain/Doctors.php">Doctors</a></li>
 									<li><a href="Patient.php">Patient</a></li>
 									<li><a href="contact.php">Contact</a></li>
+									<li><a href="hangman.php">Gaming</a></li>
 								</ul>
 							</nav>
 							<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
