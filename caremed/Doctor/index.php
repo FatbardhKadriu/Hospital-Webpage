@@ -79,7 +79,6 @@ exit();
 							</legend>
 							<p>
 								Please enter your Username and Password to log in.<br />
-								<span style="color:red;"><?php echo $_SESSION['errmsg']; ?><?php echo $_SESSION['errmsg']="";?></span>
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
