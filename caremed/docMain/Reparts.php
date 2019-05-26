@@ -88,10 +88,18 @@
                 parent::__construct("Nurse", $name, "Stomatology");
             }
         }
+        class Janitor extends Staff
+        {
+            public function __construct($name)
+            {
+                parent::__construct("Janitor", $name, "Logopedy");
+            }
+        }
         
         $staff1 = array(
             new Doctor("Fatbardh Gashi"),
             new Nurse("Nurse 1"),
+            new Janitor("Janitor 1")
         );
 
         usort($staff1, array("Staff", "compare"));
