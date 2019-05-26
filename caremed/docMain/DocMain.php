@@ -12,12 +12,13 @@ $result = mysqli_query($con,$query);
     <style>
  body{
             background:url('../images/dna.jpg');    
+            background-attachment: fixed;
 
     }
 #divContainer{
         margin-top:200px;
         margin-left:25px; 
-        margin-bottom:800px;   
+        margin-bottom:850px;   
 }
 .our-team-main
 {
@@ -40,6 +41,27 @@ $result = mysqli_query($con,$query);
     margin-bottom:4px;
     margin-top : 15px;
     width: 120px;
+}
+.DocDiv
+{
+    width: 300px;
+    height: 50px;
+    background: #00008B;
+    margin-left: 560px;
+    margin-bottom: 60px;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    border:1px white solid;
+}
+.DocDiv a
+{
+    text-decoration: none;
+    color:white;
+}
+.DocDiv:hover
+{
+    background-color: #0000FF;
 }
 </style>
 </head>
@@ -64,9 +86,10 @@ $result = mysqli_query($con,$query);
         document.getElementById("divContainer").appendChild(div);
     <?php
     }?>
- 
+        
 </script>
-
+    
+    <div class="DocDiv"><a href="Reparts.php">Show Doctor's Reparts</a></div>
         
 
 
