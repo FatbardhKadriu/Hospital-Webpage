@@ -51,7 +51,6 @@ exit();
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta content="" name="description" />
 		<meta content="" name="author" />
-		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="vendor/themify-icons/themify-icons.min.css">
@@ -60,6 +59,7 @@ exit();
 		<link href="vendor/switchery/switchery.min.css" rel="stylesheet" media="screen">
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
 		<style>
 		body{
@@ -130,6 +130,15 @@ exit();
 
 			</div>
 		</div>
+  
+ 
+ 		<div class="button home_button">
+			<a href="http://localhost:8080/PI18_19_Gr4/caremed/" style="font-size: 35px;
+			 position: absolute; left: 30px; top: 20px; " 
+				class="button button1" role="button">Home</a>					
+		</div>
+
+
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="vendor/modernizr/modernizr.js"></script>

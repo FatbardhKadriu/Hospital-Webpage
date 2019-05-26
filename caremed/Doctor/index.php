@@ -110,6 +110,11 @@ exit();
 
 			</div>
 		</div>
+		<div class="button home_button">
+			<a href="http://localhost:8080/PI18_19_Gr4/caremed/" style="font-size: 35px;
+			 position: absolute; left: 30px; top: 20px; " 
+				class="button button1" role="button">Home</a>					
+		</div>
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="vendor/modernizr/modernizr.js"></script>
