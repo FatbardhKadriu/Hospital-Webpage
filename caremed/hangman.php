@@ -4,7 +4,7 @@
 	<title>Hangman</title>
 </head>
 <body style="background-color: lightblue;font-size: 30px;">
-
+<img src="hangman.png" style="position: absolute; left: 480px;">
 
 <div style="position: absolute; top: 250px; left: 480px;">
 <?php 
@@ -94,7 +94,8 @@
 ?>
 
 <form method="post">
-	Pick a letter... <input type="text" name="guess" maxlength="1" />
+	Pick a letter... <br><input type="text" name="guess" maxlength="1" />
+	<br>
 	<input type="submit" value="Guess!" />
 	<input type="submit" value="New Game" name="restart" />
 </form>
