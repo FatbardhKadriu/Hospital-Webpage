@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman</title>
+</head>
+<body style="background-color: lightblue;font-size: 30px;">
+
+
+<div style="position: absolute; top: 250px; left: 480px;">
 <?php 
 
 	session_start(); 
@@ -94,3 +103,6 @@ for ($i = 0; $i < $hangman; $i++) {
 	echo $hangmanImage[$i];
 }
 ?>
+</div>
+</body>
+</html>
