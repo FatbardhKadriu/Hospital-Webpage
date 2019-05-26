@@ -61,6 +61,10 @@ exit();
 			background:url("bg.jpg");
 			background-repeat:no-repeat;
 			background-size:cover;
+			margin-left:-50px;
+			background-position:center;
+			background-attachment: fixed;
+
 		}
 		</style>
 	</head>
