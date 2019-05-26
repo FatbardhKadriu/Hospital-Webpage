@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('include/config.php');
+include('../Doctor/include/config.php');
 $query = "Select * from doctors";
 
 $result = mysqli_query($con,$query);

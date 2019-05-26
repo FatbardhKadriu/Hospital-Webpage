@@ -74,7 +74,7 @@ require("header.php");
 					<i class="fa fa-user-md" style="font-size:48px;color:red"></i><br>
 						<div class="box_title">Doctors Login</div>
 						<div class="box_text">Log in to your doctor account!</div>
-						<div class="button" style='margin-top:10%;'><span><a href="#">Click Here</a></span></div>
+						<div class="button" style='margin-top:10%;'><span><a href="Doctor">Click Here</a></span></div>
 					</div>
 				</div>
 
