@@ -112,7 +112,7 @@ if($query)
 							<div class="form-group">
 								<span class="input-icon">
 									
-    <input type="password" id="psw" class="form-control" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <input type="password" id="password" class="form-control" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 									<i class="fa fa-lock"></i> </span>
 							</div>
 							<div class="form-group">
