@@ -43,14 +43,14 @@ if(isset($_POST['submit']))
 		$cpasswordErr = "Please Check You've Entered Or Confirmed Your Password!";
 		
     } else {
-		 $passwordErr = "Please enter password   ";
 		 
-	}
 		$query=mysqli_query($con,"insert into users(fullname,address,city,gender,email,password) values('$fname','$address','$city','$gender','$email','$password')");
 		if($query)
 		{
 			header('location: registrationSuccessful.php');
 		}
+		 
+	}
 	
 }
 ?>
