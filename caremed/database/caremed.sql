@@ -97,13 +97,15 @@ CREATE TABLE `users` (
   `gender` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `vkey` varchar(225) NOT NULL,
+  `verified` tinyint(1) DEFAULT 0,
   `regDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updationDate` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
-INSERT INTO `users` (`id`, `fullName`, `address`, `city`, `gender`, `email`, `password`) VALUES
-(6, 'Patient1', 'Address 1', 'City 1', 'male', 'pat1@gmail.com', '123456'),
-(7, 'Patient2', 'Address 2', 'City 2', 'female', 'pat2@gmail.com', '123456');
+INSERT INTO `users` (`id`, `fullName`, `address`, `city`, `gender`, `email`, `password`,`vkey`,`verified`) VALUES
+(6, 'Patient1', 'Address 1', 'City 1', 'male', 'pat1@gmail.com', '123456','d06cb96ede48add563fe8d90ab8b408d','1'),
+(7, 'Patient2', 'Address 2', 'City 2', 'female', 'pat2@gmail.com', '123456','d8d2d2b2a62c733d4ba6c4561cd6d55c','1');
 
 
 ALTER TABLE `admin`
