@@ -26,10 +26,34 @@ if(isset($_POST['submit']))
 						$passwordErr = "Your Password Must Contain At Least 8 Characters, 1 Number, 1Capital Letter, 1 Lowercase Letter!";
 				}
 				else{
-					$query=mysqli_query($con,"insert into users(fullname,address,city,gender,email,password) values('$fname','$address','$city','$gender','$email','$password')");
+					
+						$fname = mysqli_real_escape_string($con, $fname);
+						$address = mysqli_real_escape_string($con, $address);
+						$city = mysqli_real_escape_string($con, $city);
+						$gender = mysqli_real_escape_string($con, $gender);
+						$email = mysqli_real_escape_string($con, $email);
+						$password = mysqli_real_escape_string($con, $password);
+						$cpassword = mysqli_real_escape_string($con, $cpassword);
+
+						$vkey = md5(time().$fname);
+
+						$password = md5($password);
+
+					$query=mysqli_query($con,"insert into users(fullname,address,city,gender,email,password,vkey) values('$fname','$address','$city','$gender','$email','$password','$vkey')");
 					if($query)
 					{
-						header('location: registrationSuccessful.php');
+						  $host = $_SERVER['HTTP_HOST'];
+						  $uri  = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+						  $extra="./verify.php";		
+						// header("Location: http://$host$uri/$extra");
+							$to = $email;
+							$subject = "Email Verification";
+							$message = "<a href='http://$host$uri$extra?vkey=$vkey'>Register Account</a>";
+							$headers = "From: caremed@gmail.com \r\n";
+							$headers .= "MIME-Version: 1.0" . "\r\n";
+							$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+							mail($to,$subject,$message,$headers);
+							header('location: registrationSuccessful.php');
 					}
 
 				}
@@ -77,6 +101,9 @@ if(isset($_POST['submit']))
 		.form-login{
 			background-color: transparent !important;
 
+		}
+		.button{
+			display:inline;
 		}
 		</style>
 

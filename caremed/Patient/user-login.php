@@ -4,23 +4,35 @@ error_reporting(0);
 include("include/config.php");
 if(isset($_POST['submit']))
 {
-$ret=mysqli_query($con,"SELECT * FROM users WHERE email='".$_POST['username']."' and password='".$_POST['password']."'");
-$num=mysqli_fetch_array($ret);
+	$username = mysqli_real_escape_string($con, $_POST['username']);
+	$password = mysqli_real_escape_string($con, $_POST['password']);
+	$ret=mysqli_query($con,"SELECT * FROM users WHERE email='".$_POST['username']."' and password='".md5($_POST['password'])."'");
+	$num=mysqli_fetch_array($ret);
 
 if($num>0)
 {
-$extra="dashboard.php";//
-$_SESSION['login']=$_POST['username'];
-$_SESSION['id']=$num['id'];
-$_SESSION['gender'] = $num['gender'];
-$host=$_SERVER['HTTP_HOST'];
-$uip=$_SERVER['REMOTE_ADDR'];
-$status=1;
-// For stroing log if user login successfull
-$log=mysqli_query($con,"insert into userlog(uid,username,userip,status) values('".$_SESSION['id']."','".$_SESSION['login']."','$uip','$status')");
-$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");
-exit();
+	$verified = $num['verified'];
+	$email = $num['email'];
+	$date = $num['regDate'];
+	$date = strtotime($date);
+	$date = date('M d Y',$date);
+	if($verified == 1)
+	{
+		$extra="dashboard.php";//
+		$_SESSION['login']=$_POST['username'];
+		$_SESSION['id']=$num['id'];
+		$_SESSION['gender'] = $num['gender'];
+		$host=$_SERVER['HTTP_HOST'];
+		$uip=$_SERVER['REMOTE_ADDR'];
+		$status=1;
+		// For stroing log if user login successfull
+		$log=mysqli_query($con,"insert into userlog(uid,username,userip,status) values('".$_SESSION['id']."','".$_SESSION['login']."','$uip','$status')");
+		$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+		header("location:http://$host$uri/$extra");
+		exit();
+	}else{
+		$error = "This account has not yet been verified. An email was sent to $email on $date";
+	}
 }
 else
 {
@@ -79,6 +91,7 @@ exit();
 	</head>
 	<body class="login">
 		<div class="row" style="margin-top:90px;">
+		
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
 				<h1 style="color: #000000; margin-left:70px;font-size: 50px;font-weight:bold;"> Patient Login</h1>
@@ -86,6 +99,8 @@ exit();
 				</div>
 
 				<div class="box-login" style="width:450px;">
+				<span style="color:red;"><?php echo $error?></span>
+
 					<form class="form-login" method="post">
 						<fieldset>
 							<legend>
@@ -120,6 +135,7 @@ exit();
 								</a>
 							</div>
 						</fieldset>
+
 					</form>
 
 					<div class="copyright">

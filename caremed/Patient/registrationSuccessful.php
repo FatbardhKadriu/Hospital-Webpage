@@ -65,10 +65,11 @@
 
                                     ?>
 										<div class="home_text">
-											<p>Now you can LogIn here!</p>
+											<p>We have sent a verification email to the address provided!</p>
+
 										</div>
 										<div class="button home_button">
-										<a href="user-login.php" class="btn btn-info" role="button">Get started</a>
+										<a href="https://mail.google.com/mail/u/0/" class="btn btn-info" role="button">Go to Gmail</a>
 										
 										</div>
 									</div>
