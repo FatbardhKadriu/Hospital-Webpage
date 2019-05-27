@@ -133,7 +133,7 @@ exit();
   
  
  		<div class="button home_button">
-			<a href="http://localhost:8080/PI18_19_Gr4/caremed/" style="font-size: 35px;
+			<a href="../index.php" style="font-size: 35px;
 			 position: absolute; left: 30px; top: 20px; " 
 				class="button button1" role="button">Home</a>					
 		</div>
