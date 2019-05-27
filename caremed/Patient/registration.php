@@ -1,23 +1,60 @@
 <?php
 session_start();
 include_once('include/config.php');
+$_SESSION['Passwordsdonotmatch']="";
+$passwordErr = "";
+$cpasswordErr = "";
+function test_input($data) {
+	$data = stripslashes($data);
+	$data = ltrim($data);
+	$data  = trim($data, '/\\');
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 if(isset($_POST['submit']))
 {
-$fname=$_POST['full_name'];
-$address=$_POST['address'];
-$city=$_POST['city'];
-$gender=$_POST['gender'];
-$email=$_POST['email'];
-$password=$_POST['password'];
-$_SESSION['fullName'] = $fname;
-$query=mysqli_query($con,"insert into users(fullname,address,city,gender,email,password) values('$fname','$address','$city','$gender','$email','$password')");
-if($query)
-{
-	// echo "<script>alert('Successfully Registered. You can login now');</script>";
-	header('location: registrationSuccessful.php');
-}
+	$fname=test_input($_POST['full_name']);
+	$address=test_input($_POST['address']);
+	$city=test_input($_POST['city']);
+	$gender=test_input($_POST['gender']);
+	$email=test_input($_POST['email']);
+	$password=test_input($_POST['password']);
+	$cpassword=test_input($_POST['cpassword']);
+	$_SESSION['fullName'] = $fname;
+
+	if(!empty($_POST["password"]) && ($_POST["password"] == $_POST["cpassword"])) {
+        $password = test_input($_POST["password"]);
+        $cpassword = test_input($_POST["cpassword"]);
+        if (strlen($_POST["password"]) <= 8) {
+            $passwordErr = "Your Password Must Contain At Least 8 Characters!";
+        }
+        elseif(!preg_match("#[0-9]+#",$password)) {
+            $passwordErr = "Your Password Must Contain At Least 1 Number!";
+        }
+        elseif(!preg_match("#[A-Z]+#",$password)) {
+            $passwordErr = "Your Password Must Contain At Least 1 Capital Letter!";
+        }
+        elseif(!preg_match("#[a-z]+#",$password)) {
+            $passwordErr = "Your Password Must Contain At Least 1 Lowercase Letter!";
+		}
+		
+    }
+    elseif(!empty($_POST["password"])) {
+		$cpasswordErr = "Please Check You've Entered Or Confirmed Your Password!";
+		
+    } else {
+		 $passwordErr = "Please enter password   ";
+		 
+	}
+		$query=mysqli_query($con,"insert into users(fullname,address,city,gender,email,password) values('$fname','$address','$city','$gender','$email','$password')");
+		if($query)
+		{
+			header('location: registrationSuccessful.php');
+		}
+	
 }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -109,17 +146,28 @@ if($query)
 									<i class="fa fa-envelope"></i> </span>
 									 <span id="user-availability-status1" style="font-size:12px;"></span>
 							</div>
+							<span style="color:red;">
+							<?php
+							echo $passwordErr;
+							?>
+							</span>
 							<div class="form-group">
 								<span class="input-icon">
 									
-    <input type="password" id="password" class="form-control" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <input type="password" id="password" class="form-control" name="password" placeholder="Password"  required>
 									<i class="fa fa-lock"></i> </span>
 							</div>
+							<span style="color:red;">
+							<?php
+							echo $cpasswordErr;
+							?>
+							</span>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="password" class="form-control" name="password_again" placeholder="Confirm Password" required>
+									<input type="password" class="form-control" name="cpassword" placeholder="Confirm Password" required>
 									<i class="fa fa-lock"></i> </span>
 							</div>
+							
 							
 							<div class="form-actions">
 								<p>
