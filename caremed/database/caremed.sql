@@ -107,6 +107,13 @@ INSERT INTO `users` (`id`, `fullName`, `address`, `city`, `gender`, `email`, `pa
 (6, 'Patient1', 'Address 1', 'City 1', 'male', 'pat1@gmail.com', '123456','d06cb96ede48add563fe8d90ab8b408d','1'),
 (7, 'Patient2', 'Address 2', 'City 2', 'female', 'pat2@gmail.com', '123456','d8d2d2b2a62c733d4ba6c4561cd6d55c','1');
 
+CREATE TABLE `medicines`(
+	`id` varchar(100) primary key,
+    `m_name` varchar(100) not null,
+    `qty` varchar(100) not null
+    );
+
+INSERT INTO `medicines` () VALUES ('1A', 'medicine1', 10);
 
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
