@@ -114,6 +114,7 @@ CREATE TABLE `medicines`(
     );
 
 INSERT INTO `medicines` () VALUES ('1A', 'medicine1', 10);
+INSERT INTO `medicines` () VALUES ('1B', 'medicine2', 70);
 
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
