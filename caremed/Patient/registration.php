@@ -127,24 +127,26 @@ if(isset($_POST['submit']))
 								Enter your personal details below:
 							</p>
 							<div class="form-group">
-								<input type="text" class="form-control" name="full_name" placeholder="Full Name" required>
+								<input type="text" class="form-control" name="full_name" value="<?= isset($_POST['full_name']) ? $_POST['full_name'] : ''; ?>" placeholder="Full Name" required>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" name="address" placeholder="Address" required>
+								<input type="text" class="form-control" name="address" value="<?= isset($_POST['address']) ? $_POST['address'] : ''; ?>" placeholder="Address" required>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" name="city" placeholder="City" required>
+								<input type="text" class="form-control" name="city"  value="<?= isset($_POST['city']) ? $_POST['city'] : ''; ?>" placeholder="City" required>
 							</div>
 							<div class="form-group">
 								<label class="block">
 									Gender
 								</label>
 								<div class="clip-radio radio-primary">
-									<input type="radio" id="rg-female" name="gender" value="female" >
+									<input type="radio" id="rg-female" name="gender"
+									<?php if (isset($gender) && $gender =="female") echo "checked";?> value="female" >
 									<label for="rg-female">
 										Female
 									</label>
-									<input type="radio" id="rg-male" name="gender" value="male">
+									<input type="radio" id="rg-male" name="gender"
+									 <?php if (isset($gender) && $gender =="male") echo "checked";?> value="male">
 									<label for="rg-male">
 										Male
 									</label>
@@ -155,7 +157,8 @@ if(isset($_POST['submit']))
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()"  placeholder="Email" required>
+									<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()" 
+									 value="<?= isset($_POST['email']) ? $_POST['email'] : ''; ?>" placeholder="Email" required>
 									<i class="fa fa-envelope"></i> </span>
 									<p><img src="assetsLoaderIcon.gif" id="loaderIcon" style="display:none" /></p>
 									 <span id="user-availability-status1" style="font-size:12px;"></span>
