@@ -157,6 +157,7 @@ if(isset($_POST['submit']))
 								<span class="input-icon">
 									<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()"  placeholder="Email" required>
 									<i class="fa fa-envelope"></i> </span>
+									<p><img src="assetsLoaderIcon.gif" id="loaderIcon" style="display:none" /></p>
 									 <span id="user-availability-status1" style="font-size:12px;"></span>
 							</div>
 							<span style="color:red;">
@@ -218,24 +219,14 @@ if(isset($_POST['submit']))
 		<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/login.js"></script>
-		<script>
-			jQuery(document).ready(function() {
-				Main.init();
-				Login.init();
-			});
-		</script>
-		
 	<script>
 function userAvailability() {
-$("#loaderIcon").show();
 jQuery.ajax({
 url: "check_availability.php",
 data:'email='+$("#email").val(),
 type: "POST",
 success:function(data){
-$("#user-availability-status1").html(data);
-$("#loaderIcon").hide();
-},
+$("#user-availability-status1").html(data);},
 error:function (){}
 });
 }
