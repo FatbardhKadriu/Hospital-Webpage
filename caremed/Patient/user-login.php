@@ -122,6 +122,10 @@ exit();
 									 </span>
 									
 							</div>
+							<div class="forgot-pass">
+							<a href="forgot-password.php">
+							Forgot your password?
+							</a>
 							<div class="form-actions">
 								
 								<button type="submit" style="width:150px;font-size:20px;padding:7px;" class="btn btn-primary center-block" name="submit">
