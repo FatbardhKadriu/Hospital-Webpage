@@ -7,25 +7,37 @@ if(isset($_GET['chPass']))
     $chPass = $_GET['chPass'];
     if(isset($_POST['submit']))
     {
-            $password = $_POST['password'];
-            $password = md5($password);
-
-            $query = "SELECT * from users WHERE vkey = '$chPass' LIMIT 1";
-
-            $result = mysqli_query($con, $query);
-
-        if(mysqli_num_rows($result) == 1)
+        if(!empty($_POST['password']) && ($_POST['password'] == $_POST['cpassword']))
         {
-            $update = mysqli_query($con,"UPDATE users SET password = '$password' WHERE vkey = '$chPass' LIMIT 1");
-            if($update)
+            $password = $_POST['password'];
+
+            if (strlen($_POST["password"]) <= 8 || !preg_match("#[0-9]+#",$password) || !preg_match("#[A-Z]+#",$password) || !preg_match("#[a-z]+#",$password)) 
             {
-                $messageSuccess = "Your password has been changed";
+                $messageError = "Your Password Must Contain At Least 8 Characters, 1 Number, 1 Capital Letter, 1 Lowercase Letter!";
             }
-        }else{
-            $messageError =  "Cannot changed";
+            else
+            {
+                $password = md5($password);
+                $query = "SELECT * from users WHERE vkey = '$chPass' LIMIT 1";
+                $result = mysqli_query($con, $query);
+                if(mysqli_num_rows($result) == 1)
+                {
+                    $update = mysqli_query($con,"UPDATE users SET password = '$password' WHERE vkey = '$chPass' LIMIT 1");
+                    if($update)
+                    {
+                         $messageSuccess = "Your password has been changed";
+                    }
+                }
+                else
+                {
+                    $messageError =  "Cannot changed";
+                }
+            }
         }
-    }else{
-        $messageError = "Please enter your password";
+        else
+        {
+            $messageError = "Your password don't match";
+        }
     }
 }
 ?>
@@ -84,11 +96,11 @@ if(isset($_GET['chPass']))
     <form method='post'>
     <div class='form-group'>
     <label>New password : </label>
-    <input type='password' name='password' class='form-control' placeholder='Enter a new password'>
+    <input type='password' name='password' class='form-control' placeholder='Enter a new password' required>
     </br>
     <div class='form-group'>
     <label>Re-enter password : </label>
-    <input type='password' name='cpassword' class='form-control' placeholder='Repeat new password''>
+    <input type='password' name='cpassword' class='form-control' placeholder='Repeat new password' required>
     </br>
     </div>
     <div class="button home_button">

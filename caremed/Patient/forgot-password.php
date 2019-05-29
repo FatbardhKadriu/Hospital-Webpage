@@ -26,13 +26,15 @@ if(isset($_POST['email']))
                     $messageSuccess = "An email has sent to your gmail";
                 }
         }
-        else{
+        else
+        {
             $messageError = "This email address do not exists";
         }
-    }else{
+    }
+    else
+    {
         $messageError = "Please enter your email address";
     }
-   
 }
 
 ?>
