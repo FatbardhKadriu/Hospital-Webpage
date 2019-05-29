@@ -23,7 +23,7 @@ if(isset($_POST['submit']))
 
 	if(!empty($_POST["password"]) && ($_POST["password"] == $_POST["cpassword"])) {
         if (strlen($_POST["password"]) <= 8 || !preg_match("#[0-9]+#",$password) || !preg_match("#[A-Z]+#",$password) || !preg_match("#[a-z]+#",$password)) {
-						$passwordErr = "Your Password Must Contain At Least 8 Characters, 1 Number, 1Capital Letter, 1 Lowercase Letter!";
+						$passwordErr = "Your Password Must Contain At Least 8 Characters, 1 Number, 1 Capital Letter, 1 Lowercase Letter!";
 				}
 				else{
 					
