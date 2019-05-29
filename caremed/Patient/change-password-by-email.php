@@ -34,10 +34,18 @@ if(isset($_GET['chPass']))
 		<title>Forgot Password</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta content="" name="description" />
 		<meta content="" name="author" />
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+		<link href="vendor/animate.css/animate.min.css" rel="stylesheet" media="screen">
+		<link href="vendor/perfect-scrollbar/perfect-scrollbar.min.css" rel="stylesheet" media="screen">
+		<link href="vendor/switchery/switchery.min.css" rel="stylesheet" media="screen">
 		<link rel="stylesheet" href="assets/css/styles.css">
+		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 		
@@ -72,11 +80,11 @@ if(isset($_GET['chPass']))
     <form method='post'>
     <div class='form-group'>
     <label>New password : </label>
-    <input type='password' name='email' class='form-control' placeholder='Enter a new password'>
+    <input type='email' name='email' class='form-control' placeholder='Enter a new password'>
     </br>
     <div class='form-group'>
     <label>Re-enter password : </label>
-    <input type='password' name='email' class='form-control' placeholder='Repeat new password'>
+    <input type='email' name='email' class='form-control' placeholder='Repeat new password''>
     </br>
     </div>
     <div class="button home_button">
