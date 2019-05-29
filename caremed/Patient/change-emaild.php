@@ -2,19 +2,22 @@
 session_start();
 //error_reporting(0);
 include('include/config.php');
-include('include/checklogin.php');
-check_login();
 if(isset($_POST['submit']))
 {
 	$email=$_POST['email'];
-$sql=mysqli_query($con,"Update users set email='$email' where id='".$_SESSION['id']."'");
-if($sql)
-{
-$msg="Your email updated Successfully";
-
-
-}
-
+	$vkey = md5(time().$email);
+	$sql=mysqli_query($con,"Update users set email='$email', verified = 0, vkey = '$vkey' where id='".$_SESSION['id']."'");
+	if($sql)
+	{
+	  $to = $email;
+	  $subject = "Email Verification";
+	  $message = "<a href='http://localhost/PI18_19_Gr4/caremed/Patient/verify.php?vkey=$vkey'>Register Account</a>";
+	  $headers = "From: caremed@gmail.com \r\n";
+	  $headers .= "MIME-Version: 1.0" . "\r\n";
+	  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+	  mail($to,$subject,$message,$headers);
+	  $msg="We send an email for confirmation";	
+	}
 }
 ?>
 <!DOCTYPE html>
@@ -76,7 +79,7 @@ $msg="Your email updated Successfully";
 							<div class="row">
 								<div class="col-md-12">
 <h5 style="color: green; font-size:18px; ">
-<?php if($msg) { echo htmlentities($msg);}?> </h5>
+<?php if($msg) { echo $msg;}?> </h5>
 									<div class="row margin-top-30">
 										<div class="col-lg-8 col-md-12">
 											<div class="panel panel-white">

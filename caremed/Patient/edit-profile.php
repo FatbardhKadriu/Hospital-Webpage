@@ -7,18 +7,15 @@ check_login();
 if(isset($_POST['submit']))
 {
 	$fname=$_POST['fname'];
-$address=$_POST['address'];
-$city=$_POST['city'];
-$gender=$_POST['gender'];
+	$address=$_POST['address'];
+	$city=$_POST['city'];
+	$gender=$_POST['gender'];
 
-$sql=mysqli_query($con,"Update users set fullName='$fname',address='$address',city='$city',gender='$gender' where id='".$_SESSION['id']."'");
-if($sql)
-{
-$msg="Your Profile updated Successfully";
-
-
-}
-
+	$sql=mysqli_query($con,"Update users set fullName='$fname',address='$address',city='$city',gender='$gender' where id='".$_SESSION['id']."'");
+	if($sql)
+	{
+	$msg="Your Profile updated Successfully";
+	}
 }
 ?>
 <!DOCTYPE html>
@@ -80,7 +77,7 @@ $msg="Your Profile updated Successfully";
 							<div class="row">
 								<div class="col-md-12">
 <h5 style="color: green; font-size:18px; ">
-<?php if($msg) { echo htmlentities($msg);}?> </h5>
+<?php if($msg) { echo $msg;}?> </h5>
 									<div class="row margin-top-30">
 										<div class="col-lg-8 col-md-12">
 											<div class="panel panel-white">
