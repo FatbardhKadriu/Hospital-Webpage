@@ -4,16 +4,12 @@ create database caremed;
 
 use caremed;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+01:00";
-
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL primary key,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `updationDate` varchar(255) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
 
 INSERT INTO `admin` (`id`, `username`, `password`, `updationDate`) VALUES
 (1, 'bardhi', 'bardhi', '');
@@ -46,12 +42,12 @@ CREATE TABLE `doctors` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 INSERT INTO `doctors` (`id`, `specilization`, `doctorName`,`gender`, `address`, `docFees`, `contactno`, `docEmail`, `password`, `updationDate`) VALUES
-(1, 'Dentist', 'Doctor 1','male', 'Address 1', '500', 045111222, 'doc1@gmail.com', '123456', ''),
-(2, 'physiotherapist', 'Doctor 2','male', 'Address 2', '600', 045333444, 'doc2@gmail.com', '123456', ''),
-(3, 'General Physician', 'Doctor 3', 'female','Address 3', '1200', 045323123, 'doc3@gmail.com', '123456', ''),
-(4, 'Othorino-laringologist', 'Doctor 4','female', 'Address 4', '700', 045123211, 'doc4@gmail.com', '123456', ''),
-(5, 'Dermatologist', 'Doctor 5', 'male','Address 5', '900', 045444111, 'doc5@gmail.com', '123456', ''),
-(6, 'General Physician', 'Doctor 6','female', 'Address 6', '2500', 044191919, 'doc6@gmail.com', '123456', '');
+(1, 'Dentist', 'Doctor 1','male', 'Address 1', '500', 045111222, 'doc1@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', ''),
+(2, 'physiotherapist', 'Doctor 2','male', 'Address 2', '600', 045333444, 'doc2@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', ''),
+(3, 'General Physician', 'Doctor 3', 'female','Address 3', '1200', 045323123, 'doc3@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', ''),
+(4, 'Othorino-laringologist', 'Doctor 4','female', 'Address 4', '700', 045123211, 'doc4@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', ''),
+(5, 'Dermatologist', 'Doctor 5', 'male','Address 5', '900', 045444111, 'doc5@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', ''),
+(6, 'General Physician', 'Doctor 6','female', 'Address 6', '2500', 044191919, 'doc6@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', '');
 
 
 CREATE TABLE `doctorslog` (

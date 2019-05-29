@@ -3,7 +3,7 @@ session_start();
 include("include/config.php");
 if(isset($_POST['submit']))
 {
-$ret=mysqli_query($con,"SELECT * FROM doctors WHERE docEmail='".$_POST['username']."' and password='".$_POST['password']."'");
+$ret=mysqli_query($con,"SELECT * FROM doctors WHERE docEmail='".$_POST['username']."' and password='".md5($_POST['password'])."'");
 $num=mysqli_fetch_array($ret);
 if($num>0)
 {
@@ -58,7 +58,7 @@ exit();
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
 		<style>
 		body{
-			background:url("bg.jpg");
+			background:url("assets/images/bg.jpg");
 			background-repeat:no-repeat;
 			background-size:cover;
 			margin-left:-50px;

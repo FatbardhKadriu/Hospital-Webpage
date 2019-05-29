@@ -32,13 +32,13 @@
 								if($_SESSION['gender'] == "male")
 								{
 									?>
-									<img src="MaleDoctor.jpg" alt="Doctor"> <span class="username">
+									<img src="assets/images/MaleDoctor.jpg" alt="Doctor"> <span class="username">
 								<?php
 								}
 								else if($_SESSION['gender'] == "female")
 								{
 									?>
-								<img src="FemaleDoctor.jpg" alt="Doctor"> <span class="username">
+								<img src="assets/images/FemaleDoctor.jpg" alt="Doctor"> <span class="username">
 								<?php
 								}
 								?>
