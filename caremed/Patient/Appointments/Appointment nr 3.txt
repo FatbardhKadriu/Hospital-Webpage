@@ -1,0 +1,7 @@
+Appointment Nr : 3
+Patient : Fatbardh Kadriu
+Doctor : Doctor 1
+doctorSpecialization : Dentist
+Appointment Date : 2019-05-29
+Appointment Time : 5:15 PM
+

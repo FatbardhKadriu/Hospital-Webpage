@@ -7,7 +7,7 @@ check_login();
 if(isset($_GET['cancel']))
 		  {
 		          mysqli_query($con,"update appointment set userStatus='0' where id = '".$_GET['id']."'");
-                  $_SESSION['msg']="Your appointment canceled !!";
+                  $_SESSION['msg']="Appointment nr.'".$_GET['id']."' canceled";
 		  }
 ?>
 <!DOCTYPE html>
@@ -87,14 +87,21 @@ if(isset($_GET['cancel']))
 										</thead>
 										<tbody>
 <?php
+$nameOfPatient = mysqli_query($con, "select fullName from users where id = '".$_SESSION['id']."'");
+$s = mysqli_fetch_assoc($nameOfPatient);
 $sql=mysqli_query($con,"select doctors.doctorName as docname,appointment.*  from appointment join doctors on doctors.id=appointment.doctorId where appointment.userId='".$_SESSION['id']."'");
-$cnt=1;
 while($row=mysqli_fetch_array($sql))
 {
+	$file = fopen("Appointments/Appointment nr ".$row['id'].".txt","w+") or die("file not open");
+
+     fputs($file,"Appointment Nr : ".$row['id']."\nPatient : ".$s['fullName']."\nDoctor : ".$row['docname']."\ndoctorSpecialization : ".$row['doctorSpecialization']."\nAppointment Date : ".$row['appointmentDate']
+     ."\nAppointment Time : ".$row['appointmentTime']."\n\n") or die("Data not write");
+
+    fclose($file);
 ?>
 
 											<tr>
-												<td class="center"><?php echo $cnt;?>.</td>
+												<td class="center"><?php echo $row['id'];?>.</td>
 												<td class="hidden-xs"><?php echo $row['docname'];?></td>
 												<td><?php echo $row['doctorSpecialization'];?></td>
 												<td><?php echo $row['consultancyFees'];?></td>
@@ -159,7 +166,6 @@ if(($row['userStatus']==1) && ($row['doctorStatus']==0))
 											</tr>
 											
 											<?php 
-$cnt=$cnt+1;
 											 }?>
 											
 											
@@ -206,13 +212,5 @@ $cnt=$cnt+1;
 		<script src="assets/js/main.js"></script>
 		<!-- start: JavaScript Event Handlers for this page -->
 		<script src="assets/js/form-elements.js"></script>
-		<script>
-			jQuery(document).ready(function() {
-				Main.init();
-				FormElements.init();
-			});
-		</script>
-		<!-- end: JavaScript Event Handlers for this page -->
-		<!-- end: CLIP-TWO JAVASCRIPTS -->
 	</body>
 </html>

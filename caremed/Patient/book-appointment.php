@@ -240,14 +240,9 @@ while($row=mysqli_fetch_array($ret))
 		<!-- start: JavaScript Event Handlers for this page -->
 		<script src="assets/js/form-elements.js"></script>
 		<script>
-			jQuery(document).ready(function() {
-				Main.init();
-				FormElements.init();
-			});
-
 			$('.datepicker').datepicker({
-    format: 'yyyy-mm-dd',
-    startDate: '-3d'
+			format: 'yyyy-mm-dd',
+			startDate: '-3d'
 });
 		</script>
 		  <script type="text/javascript">
