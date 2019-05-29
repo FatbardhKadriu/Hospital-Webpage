@@ -1,30 +1,32 @@
 <?php
-$message = "";
+$messageSuccess = "";
+$messageError = "";
 include('include/config.php');
 if(isset($_GET['chPass']))
 {
     $chPass = $_GET['chPass'];
-    
-    if(isset($_POST['password']))
+    if(isset($_POST['submit']))
     {
-        $password = $_POST['password'];
+            $password = $_POST['password'];
+            $password = md5($password);
 
-        $query = "SELECT * from users WHERE vkey = '$chPass' LIMIT 1";
+            $query = "SELECT * from users WHERE vkey = '$chPass' LIMIT 1";
 
-        $result = mysqli_query($con, $query);
+            $result = mysqli_query($con, $query);
 
-    if(mysqli_num_rows($result) == 1)
-    {
-        $update = mysqli_query($con,"UPDATE users SET password = '$password' WHERE vkey = '$chPass' LIMIT 1");
-        if($update)
+        if(mysqli_num_rows($result) == 1)
         {
-            $message = "<h1>Your password has been changed</h1>";
+            $update = mysqli_query($con,"UPDATE users SET password = '$password' WHERE vkey = '$chPass' LIMIT 1");
+            if($update)
+            {
+                $messageSuccess = "Your password has been changed";
+            }
+        }else{
+            $messageError =  "Cannot changed";
         }
     }else{
-        $message =  "<h1>Cannot changed</h1>";
+        $messageError = "Please enter your password";
     }
-}
-
 }
 ?>
 <!DOCTYPE html>
@@ -75,20 +77,22 @@ if(isset($_GET['chPass']))
 <div class='container' style='position: relative; margin: auto; align-items: center; margin-left: 40%; margin-top:3%'>
         <div class='login-form col-md-4 offset-md-4'>
         <div class='jumbotron' style='margin-top:20px; padding-top:20px; padding-bottom:30px;'>
-<h3 align='center'>Change your password</h3></br>
+<h3 align='center'>Change your password</h3>
+<span style="color:green;font-weight:bold;"><?php echo $messageSuccess; ?></span>
+<span style="color:red;"><?php echo $messageError; ?></span>
     </br>
     <form method='post'>
     <div class='form-group'>
     <label>New password : </label>
-    <input type='email' name='email' class='form-control' placeholder='Enter a new password'>
+    <input type='password' name='password' class='form-control' placeholder='Enter a new password'>
     </br>
     <div class='form-group'>
     <label>Re-enter password : </label>
-    <input type='email' name='email' class='form-control' placeholder='Repeat new password''>
+    <input type='password' name='cpassword' class='form-control' placeholder='Repeat new password''>
     </br>
     </div>
     <div class="button home_button">
-	<a href="change-password-by-email.php" class="btn btn-info" role="button">Reset password</a>							
+	<input type="submit" name="submit" value="Reset Password" class="btn btn-info" role="button"/>					
 	</div> 
        </div>
  
