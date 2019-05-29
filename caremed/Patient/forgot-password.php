@@ -88,7 +88,7 @@ if(isset($_POST['email']))
     <input type='email' name='email' class='form-control' placeholder='Enter your e-mail address...'>
     </br>
     <div class="button home_button">
-	<a href="change-password-by-email.php" class="btn btn-info" role="button">Receive new password by e-mail</a>								
+	<a href="https://mail.google.com/mail/u/0/" class="btn btn-info" role="button">Receive new password by e-mail</a>								
 	</div> 
     </div>
     </form>
