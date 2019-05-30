@@ -103,6 +103,12 @@ INSERT INTO `users` (`id`, `fullName`, `address`, `city`, `gender`, `email`, `pa
 (6, 'Patient1', 'Address 1', 'City 1', 'male', 'pat1@gmail.com', '123456','d06cb96ede48add563fe8d90ab8b408d','1'),
 (7, 'Patient2', 'Address 2', 'City 2', 'female', 'pat2@gmail.com', '123456','d8d2d2b2a62c733d4ba6c4561cd6d55c','1');
 
+create table `contact`(
+`name` varchar(40),
+`email` varchar(40),
+`subject` varchar(255),
+`message` varchar(1000));
+
 CREATE TABLE `medicines`(
 	`id` varchar(100) primary key,
     `m_name` varchar(100) not null,
