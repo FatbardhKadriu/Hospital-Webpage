@@ -1,0 +1,7 @@
+Appointment Nr : 1
+Patient : Fortesa
+Doctor : Doctor 3
+doctorSpecialization : General Physician
+Appointment Date : 2019-05-27
+Appointment Time : 10:00 PM
+
