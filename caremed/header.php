@@ -49,7 +49,6 @@
 									<li><a href="docMain/Doctors.php">Doctors</a></li>
 									<li><a href="Patient.php">Patient</a></li>
 									<li><a href="contact.php">Contact</a></li>
-									<li><a href="hangman.php">Gaming</a></li>
 									<li><a href="Pharmacy/index.php">Pharmacy</a></li>
 								</ul>
 							</nav>

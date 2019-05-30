@@ -288,9 +288,9 @@ Admissions: At the Admitting Department, the patient will be required to provide
 			<div class="row">
 				<div class="col">
 					<div class="cta_content text-center">
-						<h2>Need a personal health plan?</h2>
+						<h2>Do you need relaxation??</h2>
 						<p>At the American Hospital you will find the best service.</p>
-						<div class="button cta_button"><a href="#">request a plan</a></div>
+						<div class="button cta_button"><a href="hangman.php">Play a game</a></div>
 					</div>
 				</div>
 			</div>
