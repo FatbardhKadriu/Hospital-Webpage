@@ -23,13 +23,13 @@ require("header.php");
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/about.jpg" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" style="margin-top:-500px;" data-image-src="images/about.jpg" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title">About <span>CareMed</span></div>
+							<div class="home_title" style="margin-top:-500px;">About <span>CareMed</span></div>
 							<div class="breadcrumbs">
 								<ul>
 									<li><a href="index.php">Home</a></li>
@@ -45,7 +45,7 @@ require("header.php");
 
 	<!-- About -->
 
-	<div class="about">
+	<div class="about" style="margin-top:-500px;">
 		<div class="container">
 			<div class="row">
 
@@ -121,7 +121,7 @@ require("header.php");
 
 	<!-- Testimonials -->
 
-	<div class="testimonials">
+	<div class="testimonials" >
 		<div class="testimonials_background parallax-window" data-parallax="scroll" data-image-src="images/testimonials.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
