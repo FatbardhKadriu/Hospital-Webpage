@@ -1,7 +1,49 @@
+<?php
+$message = "";
+if(isset($_POST['submit']))
+{
+	include('Patient/include/config.php');
+
+	$name = mysqli_real_escape_string($con, $_POST['name']);
+	$email = mysqli_real_escape_string($con, $_POST['email']);
+	$subject = mysqli_real_escape_string($con, $_POST['subject']);
+	$message = mysqli_real_escape_string($con, $_POST['message']);
+	$query = "Insert into contact(name,email,subject,message) values('$name','$email','$subject','$message')";
+	$result = $con -> query($query);
+	if($result)
+	{
+		$message = "Thank you for contact";
+	}
+	else
+	{
+		$message = "Something went wrong";
+	}
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Contact</title>
+<style>
+.submitButon{
+	width:100px;
+	padding:11px;
+	color:white;
+	background-color:blue;
+	opacity:1;
+	border-radius:11px;
+}
+.submitButon:hover{
+	color:white;
+	opacity:1;
+	background-color:green;
+}
+</style>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="CareMed demo project">
@@ -23,13 +65,13 @@ require("header.php");
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/contact.jpg" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/contact.jpg" style="height:400px" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title"><span>CareMed</span> News</div>
+							<div class="home_title" style="margin-top:-500px;"><span>CareMed</span> News</div>
 							<div class="breadcrumbs">
 								<ul>
 									<li><a href="index.php">Home</a></li>
@@ -45,13 +87,13 @@ require("header.php");
 
 	<!-- Contact -->
 
-	<div class="contact">
+	<div class="contact" style="margin-top:-500px;">
 		<div class="container">
 			<div class="row">
 
 				<!-- Contact Info -->
 				<div class="col-lg-6">
-					<div class="section_title"><h2>Get in touch</h2></div>
+					<div class="section_title" ><h2>Get in touch</h2></div>
 					<div class="contact_text">
 						<p>Contact Us Online
 Do you have a question about our services or another topic?
@@ -69,19 +111,20 @@ We have more than 60 locations across Iowa, Minnesota and Wisconsin.</p>
 
 				<!-- Contact Form -->
 				<div class="col-lg-6 form_col">
+				<p style="color:green"><?php echo $message ?></p>
 					<div class="contact_form_container">
-						<form action="#" id="contact_form" class="contact_form">
+						<form method="post" id="contact_form" class="contact_form">
 							<div class="row">
 								<div class="col-md-6 input_col">
-									<div class="input_container input_name"><input type="text" class="contact_input" placeholder="Name" required="required"></div>
+									<div class="input_container input_name"><input type="text" name="name" class="contact_input" placeholder="Name" required="required"></div>
 								</div>
 								<div class="col-md-6 input_col">
-									<div class="input_container"><input type="email" class="contact_input" placeholder="E-mail" required="required"></div>
+									<div class="input_container"><input type="email" class="contact_input" name="email" placeholder="E-mail" required="required"></div>
 								</div>
 							</div>
-							<div class="input_container"><input type="text" class="contact_input" placeholder="Subject" required="required"></div>
-							<div class="input_container"><textarea class="contact_input contact_text_area" placeholder="Message" required="required"></textarea></div>
-							<button class="button contact_button"><a href="#">send</a></button>
+							<div class="input_container"><input type="text" class="contact_input" placeholder="Subject" name="subject" required="required"></div>
+							<div class="input_container"><textarea class="contact_input contact_text_area" placeholder="Message" maxlength="1000" name="message" required="required"></textarea></div>
+							<input type="submit" name="submit" class="submitButon"/>
 						</form>
 					</div>
 				</div>
