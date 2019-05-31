@@ -104,6 +104,7 @@ INSERT INTO `users` (`id`, `fullName`, `address`, `city`, `gender`, `email`, `pa
 (7, 'Patient2', 'Address 2', 'City 2', 'female', 'pat2@gmail.com', '123456','d8d2d2b2a62c733d4ba6c4561cd6d55c','1');
 
 create table `contact`(
+`id` int(10) primary key auto_increment,
 `name` varchar(40),
 `email` varchar(40),
 `subject` varchar(255),
