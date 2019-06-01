@@ -1,4 +1,4 @@
-M<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>About us</title>
@@ -80,11 +80,20 @@ require("header.php");
 						 $text = preg_replace("/The CareMed Hospital/", '<span style="color: red">The CareMed Hospital </span>', $text);
 						 echo $text
 
-						 ?>
-						<p>Our Cancer program was first in Dubai to offer comprehensive one-stop services. Our Heart Center has added electrophysiology 
-						consultation to our list of state of the art services. Our Orthopedics team is ready to serve a growing patient population in need of
-						 surgical and inpatient rehabilitation and outpatient physical therapy. Our Endocrinology services are expanding their services to address
-						  the need of diabetes and offers a multidisciplinary approach to thyroid disease management.</p>
+					?>
+						 </br></br>
+					<?php
+
+						$quote="Our Cancer program was first in Dubai to offer comprehensive one-stop services. Our Heart Center has added electrophysiology 
+						consultation to our list of state of the art services in Dubai. Our Orthopedics team is ready to serve a growing patient population in need of
+						surgical and inpatient rehabilitation and outpatient physical therapy in Dubai. Our Endocrinology services are expanding their services to address
+						the need of diabetes and offers a multidisciplinary approach to thyroid disease management.";
+
+						$replaced=str_replace("Dubai", "Kosovo", $quote);
+						echo $replaced;
+					?>
+					
+						  </br></br>
 						  <p>In addition, we are focusing on strategic initiatives with increased patient access through expanding our Clinic footprint, investment
 						   in acute stroke care, and integrative and personalized medicine.</p>
 						   <p>In June 2016, the Hospital became the inaugural Middle East member of the prestigious Mayo Clinic Care Network. Our physicians and team 

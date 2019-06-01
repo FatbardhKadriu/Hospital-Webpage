@@ -95,8 +95,11 @@ require("header.php");
 				<div class="col-lg-6">
 					<div class="section_title" ><h2>Get in touch</h2></div>
 					<div class="contact_text">
+
 						<p>Contact Us Online
+						</br>
 Do you have a question about our services or another topic?
+</br>
 
 Use Patient Online Services to securely contact your medical provider.
 Call or Visit Us
