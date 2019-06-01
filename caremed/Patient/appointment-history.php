@@ -93,8 +93,19 @@ $sql=mysqli_query($con,"select doctors.doctorName as docname,appointment.*  from
 while($row=mysqli_fetch_array($sql))
 {
 	$file = fopen("Appointments/Appointment nr ".$row['id'].".txt","w+") or die("file not open");
+	try{
+		
+		if(!$file)
+		{
+			throw new fileOpenException();
+		}
+	}
+	catch(fileOpenException $foe)
+	{
+		echo "<p><strong>Orders file could not be opened.Please contact our webmaster for help.</strong></p>";
+	}
 
-     fputs($file,"Appointment Nr : ".$row['id']."\nPatient : ".$s['fullName']."\nDoctor : ".$row['docname']."\ndoctorSpecialization : ".$row['doctorSpecialization']."\nAppointment Date : ".$row['appointmentDate']
+	fputs($file,"Appointment Nr : ".$row['id']."\nPatient : ".$s['fullName']."\nDoctor : ".$row['docname']."\ndoctorSpecialization : ".$row['doctorSpecialization']."\nAppointment Date : ".$row['appointmentDate']
      ."\nAppointment Time : ".$row['appointmentTime']."\n\n") or die("Data not write");
 
     fclose($file);
