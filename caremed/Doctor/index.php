@@ -11,7 +11,6 @@ $extra="dashboard.php";
 $_SESSION['dlogin']=$_POST['username'];
 $_SESSION['id']=$num['id'];
 $_SESSION['gender'] = $num['gender'];
-$_SESSION['errmsg']="";
 $uip=$_SERVER['REMOTE_ADDR'];
 $status=1;
 $log=mysqli_query($con,"insert into doctorslog(uid,username,userip,status) values('".$_SESSION['id']."','".$_SESSION['dlogin']."','$uip','$status')");
@@ -47,7 +46,7 @@ exit();
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<style>
 		body{
-			background:url("images/bg.jpg");
+			background:url("assets/images/bg.jpg");
 			background-repeat:no-repeat;
 			background-size:cover;
 			margin-left:-50px;
