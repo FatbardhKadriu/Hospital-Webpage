@@ -15,7 +15,7 @@ include "action.php";
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Your Website</title>
+<title>Pharmacy</title>
 <link rel="stylesheet" href="" type="text/css" />
 <script type="text/javascript"></script>
 </head>
@@ -24,7 +24,7 @@ include "action.php";
 
 <div class="container">
 <div class="jumbotron">
-<h1>Medicine Stock <small>RK Tuturial</small></h1>
+<h1>CAREMED <small>PHARMACY</small></h1>
 </div>
 </div>
 <div class="container">
@@ -125,44 +125,5 @@ include "action.php";
 }
 
 ?>
-<?php
 
-
-	class Doctor
-	{
-		private $name;
-
-		public function __construct($name)
-		{
-			echo ("The doctor's name is : $name");
-		}
-
-		public function get_name()
-		{
-			return $this->name;
-		}
-
-		public function set_name($name)
-		{
-			$this->name = $name;
-		}
-
-
-	}
-
-	$doc1 = new Doctor("Doctor1<br/>");
-
-	echo $doc1->get_name();
-
-?>
-
-<script type="text/javascript">
-	function myFunction()
-	{
-		document.getElementById("demo").innerHTML = "<?php echo "Now the doctor's name is :".$doc1->set_name("Doctor2");	
-																echo $doc1->get_name();?>";
-	}
-</script>
-	<button class="DocNameBtn" type="button" onclick="myFunction()">See Doctor's Name: </button>
-
-	<p id="demo">Hello</p>
+<a href="OOP.php" style="text-decoration:none;">OOP</a>
