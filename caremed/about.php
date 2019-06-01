@@ -53,15 +53,34 @@ require("header.php");
 				<div class="col-lg-8">
 					<div class="section_title"><h2>ABOUT US</h2></div>
 					<div class="about_text">
-						<p>The CareMed Hospital is a 254-bed, acute care, general medical/surgical private hospital
-						 with a multi-specialty physician group practice, designed to provide a high quality, American standard
-						  of healthcare to meet the needs and exceed the expectations of the people of Dubai, the UAE and the surrounding Gulf States.</p>
-						<p>The CareMed Hospital became the first hospital in the Middle East to be awarded JCI accreditation in May 2000 
+					<?php
+					$text = "The CareMed Hospital is a 254-bed, acute care, general medical/surgical private hospital  with a multi-specialty physician group practice, designed to provide a high quality, American standard
+					of healthcare to meet the needs and exceed the expectations of the people of Dubai, the UAE and the surrounding Gulf States.";
+					$text = preg_replace("/The CareMed Hospital/", '<span style="color: red">The CareMed Hospital </span>', $text);
+					echo $text
+					?>
+					</br></br>
+
+						  <?php
+
+						$text="The CareMed Hospital became the first hospital in the Middle East to be awarded JCI accreditation in May 2000 
 						and has successfully maintained its accreditation seven times. The Laboratory of the CareMed Hospital Dubai was the first 
 						private lab in the Middle East to earn accreditation by the College of American Pathologists (CAP) and was accredited for 
-						the ninth consecutive time in 2017.</p>
-						<p>The CareMed Hospital has continued to expand to meet the demand for more personalized services, comfort and convenience,
-						 while broadening the services and deepening the level of expertise and care offered.</p>
+						the ninth consecutive time in 2017.";
+						$text = preg_replace("/The CareMed Hospital/", '<span style="color: red">The CareMed Hospital</span>', $text);
+						echo $text
+
+						?>
+				</br></br>
+
+					<?php 
+
+						$text="The CareMed Hospital has continued to expand to meet the demand for more personalized services, comfort and convenience,
+						 while broadening the services and deepening the level of expertise and care offered.";
+						 $text = preg_replace("/The CareMed Hospital/", '<span style="color: red">The CareMed Hospital </span>', $text);
+						 echo $text
+
+						 ?>
 						<p>Our Cancer program was first in Dubai to offer comprehensive one-stop services. Our Heart Center has added electrophysiology 
 						consultation to our list of state of the art services. Our Orthopedics team is ready to serve a growing patient population in need of
 						 surgical and inpatient rehabilitation and outpatient physical therapy. Our Endocrinology services are expanding their services to address
