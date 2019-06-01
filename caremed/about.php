@@ -47,10 +47,13 @@ require("header.php");
 
 	<div class="about" style="margin-top:-500px;">
 		<div class="container">
+		
 			<div class="row">
+			
 
 				<!-- About Content -->
 				<div class="col-lg-8">
+				
 					<div class="section_title"><h2>ABOUT US</h2></div>
 					<div class="about_text">
 					<?php
@@ -92,7 +95,7 @@ require("header.php");
 						$replaced=str_replace("Dubai", "Kosovo", $quote);
 						echo $replaced;
 					?>
-					
+
 						  </br></br>
 						  <p>In addition, we are focusing on strategic initiatives with increased patient access through expanding our Clinic footprint, investment
 						   in acute stroke care, and integrative and personalized medicine.</p>
@@ -101,6 +104,7 @@ require("header.php");
 					</div>
 			
 				</div>
+				
 
 				<!-- Boxes -->
 				<div class="col-lg-4 boxes_col">
