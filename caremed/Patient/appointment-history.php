@@ -85,7 +85,7 @@ if(isset($_GET['cancel']))
 										</thead>
 										<tbody>
 <?php
-$nameOfPatient = mysqli_query($con, "select fullName from users where id = '".$_SESSION['id']."'");
+$nameOfPatient = mysqli_query($con, "select * from users where id = '".$_SESSION['id']."'");
 $s = mysqli_fetch_assoc($nameOfPatient);
 $sql=mysqli_query($con,"select doctors.doctorName as docname,appointment.*  from appointment join doctors on doctors.id=appointment.doctorId where appointment.userId='".$_SESSION['id']."'");
 while($row=mysqli_fetch_array($sql))
@@ -103,7 +103,7 @@ while($row=mysqli_fetch_array($sql))
 		echo "<p><strong>Orders file could not be opened.Please contact our webmaster for help.</strong></p>";
 	}
 
-	fputs($file,"Appointment Nr : ".$row['id']."\nPatient : ".$s['fullName']."\nDoctor : ".$row['docname']."\ndoctorSpecialization : ".$row['doctorSpecialization']."\nAppointment Date : ".$row['appointmentDate']
+	fputs($file,"Appointment Nr : ".$row['id']."\nPatient : ".$s['name']." ".$s['surname']."\nDoctor : ".$row['docname']."\ndoctorSpecialization : ".$row['doctorSpecialization']."\nAppointment Date : ".$row['appointmentDate']
      ."\nAppointment Time : ".$row['appointmentTime']."\n\n") or die("Data not write");
 
     fclose($file);

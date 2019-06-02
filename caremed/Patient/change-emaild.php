@@ -163,24 +163,19 @@ if(isset($_POST['submit']))
 		<script src="assets/js/main.js"></script>
 		<!-- start: JavaScript Event Handlers for this page -->
 		<script src="assets/js/form-elements.js"></script>
-		<script>
-			jQuery(document).ready(function() {
-				Main.init();
-				FormElements.init();
-			});
-		</script>
+		
 	<script>
-function userAvailability() {
-jQuery.ajax({
-url: "check_availability.php",
-data:'email='+$("#email").val(),
-type: "POST",
-success:function(data){
-$("#user-availability-status1").html(data);
-},
-error:function (){}
-});
-}
+		function userAvailability() {
+		jQuery.ajax({
+		url: "check_availability.php",
+		data:'email='+$("#email").val(),
+		type: "POST",
+		success:function(data){
+		$("#user-availability-status1").html(data);
+		},
+		error:function (){}
+		});
+		}
 </script>	
 		
 	</body>
