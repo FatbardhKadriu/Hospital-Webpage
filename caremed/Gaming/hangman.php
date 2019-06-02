@@ -12,7 +12,7 @@
 
 	session_start(); 
 	
-	$words = array("shkolla","fakullteti","librat","lapsi");
+	$words = array("shkolla","fakulteti","librat","lapsi");
 	
 	$word = (!isset($_SESSION['word'])) ? $words[rand(0, count($words))] : $_SESSION['word'];
 	$hangman = (!isset($_SESSION['hangman'])) ? 0 : $_SESSION['hangman'];
@@ -59,7 +59,7 @@
 						$display[$position] = $guess;
 						$guessLength++;	
 						if ($guessLength == strlen($word)) {
-							$message = "Game over, you win!";
+							$message = "Congrats, you win!";
 						}
 					}
 				}
