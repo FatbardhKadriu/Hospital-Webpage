@@ -281,7 +281,7 @@ Admissions: At the Admitting Department, the patient will be required to provide
 				<div class="col">
 					<div class="cta_content text-center">
 						<h2>Do you need relaxation?</h2>
-						<div class="button cta_button"><a href="hangman.php">Play a game</a></div>
+						<div class="button cta_button"><a href="Gaming/hangman.php">Play a game</a></div>
 					</div>
 				</div>
 			</div>
