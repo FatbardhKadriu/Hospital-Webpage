@@ -75,6 +75,7 @@ if(isset($_GET['cancel']))
 											<tr>
 												<th class="center">#</th>
 												<th class="hidden-xs">Patient  Name</th>
+												<th class="hidden-xs">Patient  Surname</th>
 												<th>Specialization</th>
 												<th>Consultancy Fee</th>
 												<th>Appointment Date / Time </th>
@@ -86,7 +87,7 @@ if(isset($_GET['cancel']))
 										</thead>
 										<tbody>
 <?php
-$sql=mysqli_query($con,"select users.fullName as fname,appointment.*  from appointment join users on users.id=appointment.userId where appointment.doctorId='".$_SESSION['id']."'");
+$sql=mysqli_query($con,"select users.name,users.surname,appointment.*  from appointment join users on users.id=appointment.userId where appointment.doctorId='".$_SESSION['id']."'");
 $cnt=1;
 while($row=mysqli_fetch_array($sql))
 {
@@ -94,7 +95,8 @@ while($row=mysqli_fetch_array($sql))
 
 											<tr>
 												<td class="center"><?php echo $cnt;?>.</td>
-												<td class="hidden-xs"><?php echo $row['fname'];?></td>
+												<td class="hidden-xs"><?php echo $row['name'];?></td>
+												<td class="hidden-xs"><?php echo $row['surname'];?></td>
 												<td><?php echo $row['doctorSpecialization'];?></td>
 												<td><?php echo $row['consultancyFees'];?></td>
 												<td><?php echo $row['appointmentDate'];?> / <?php echo

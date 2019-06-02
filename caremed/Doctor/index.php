@@ -4,35 +4,35 @@ include("include/config.php");
 
 if(isset($_POST['submit']))
 {
-$ret=mysqli_query($con,"SELECT * FROM doctors WHERE docEmail='".$_POST['username']."' and password='".md5($_POST['password'])."'");
-$num=mysqli_fetch_array($ret);
-if($num>0)
-{
-$extra="dashboard.php";
-$_SESSION['dlogin']=$_POST['username'];
-$_SESSION['id']=$num['id'];
-$_SESSION['gender'] = $num['gender'];
-$uip=$_SERVER['REMOTE_ADDR'];
-$status=1;
-$log=mysqli_query($con,"insert into doctorslog(uid,username,userip,status) values('".$_SESSION['id']."','".$_SESSION['dlogin']."','$uip','$status')");
-$host=$_SERVER['HTTP_HOST'];
-$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");
-exit();
-}
-else
-{
-$host  = $_SERVER['HTTP_HOST'];
-$_SESSION['dlogin']=$_POST['username'];
-$uip=$_SERVER['REMOTE_ADDR'];
-$status=0;
-mysqli_query($con,"insert into doctorslog(username,userip,status) values('".$_SESSION['dlogin']."','$uip','$status')");
-$_SESSION['errmsg']="Incorrect username or password";
-$extra="index.php";
-$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");
-exit();
-}
+	$ret=mysqli_query($con,"SELECT * FROM doctors WHERE docEmail='".$_POST['username']."' and password='".md5($_POST['password'])."'");
+	$num=mysqli_fetch_array($ret);
+	if($num>0)
+	{
+		$extra="dashboard.php";
+		$_SESSION['dlogin']=$_POST['username'];
+		$_SESSION['id']=$num['id'];
+		$_SESSION['gender'] = $num['gender'];
+		$uip=$_SERVER['REMOTE_ADDR'];
+		$status=1;
+		$log=mysqli_query($con,"insert into doctorslog(uid,username,userip,status) values('".$_SESSION['id']."','".$_SESSION['dlogin']."','$uip','$status')");
+		$host=$_SERVER['HTTP_HOST'];
+		$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+		header("location:http://$host$uri/$extra");
+		exit();
+	}
+	else
+	{
+		$host  = $_SERVER['HTTP_HOST'];
+		$_SESSION['dlogin']=$_POST['username'];
+		$uip=$_SERVER['REMOTE_ADDR'];
+		$status=0;
+		mysqli_query($con,"insert into doctorslog(username,userip,status) values('".$_SESSION['dlogin']."','$uip','$status')");
+		$_SESSION['errmsg']="Incorrect username or password";
+		$extra="index.php";
+		$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+		header("location:http://$host$uri/$extra");
+		exit();
+	}
 }
 ?>
 
@@ -72,7 +72,6 @@ exit();
 							</legend>
 							<p>
 								Please enter your Username and Password to log in.<br />
-								<span style="color:red;"><?php echo $_SESSION['errmsg']; ?><?php echo $_SESSION['errmsg']="";?></span>
 							</p>
 							<div class="form-group">
 								<span class="input-icon">

@@ -4,12 +4,13 @@ session_start();
 include('include/config.php');
 if(isset($_POST['submit']))
 {
-	$fname=$_POST['fname'];
+	$fname=$_POST['name'];
+	$lname = $_POST['surname'];
 	$address=$_POST['address'];
 	$city=$_POST['city'];
 	$gender=$_POST['gender'];
 
-	$sql=mysqli_query($con,"Update users set fullName='$fname',address='$address',city='$city',gender='$gender' where id='".$_SESSION['id']."'");
+	$sql=mysqli_query($con,"Update users set name='$fname',surname='$lname',address='$address',city='$city',gender='$gender' where id='".$_SESSION['id']."'");
 	if($sql)
 	{
 	$msg="Your Profile updated Successfully";
@@ -95,8 +96,15 @@ while($data=mysqli_fetch_array($sql))
 															<label for="fname">
 																 User Name
 															</label>
-	<input type="text" name="fname" class="form-control" value="<?php echo htmlentities($data['fullName']);?>" >
+	<input type="text" name="name" class="form-control" value="<?php echo htmlentities($data['name']);?>" >
 														</div>
+														<div class="form-group">
+															<label for="fname">
+																 User Surname
+															</label>
+	<input type="text" name="surname" class="form-control" value="<?php echo htmlentities($data['surname']);?>" >
+														</div>
+
 
 
 <div class="form-group">
