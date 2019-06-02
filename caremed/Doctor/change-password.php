@@ -2,21 +2,32 @@
 session_start();
 //error_reporting(0);
 include('include/config.php');
+$passwordErr="";
 date_default_timezone_set('Asia/Kolkata');// change according timezone
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 if(isset($_POST['submit']))
 {
-$sql=mysqli_query($con,"SELECT password FROM  doctors where password='".$_POST['cpass']."' && id='".$_SESSION['id']."'");
-$num=mysqli_fetch_array($sql);
-if($num>0)
-{
- $con=mysqli_query($con,"update doctors set password='".$_POST['npass']."', updationDate='$currentTime' where id='".$_SESSION['id']."'");
-$_SESSION['msg1']="Password Changed Successfully !!";
-}
-else
-{
-$_SESSION['msg1']="Old Password not match !!";
-}
+	if(!empty($_POST["cpass"]) && ($_POST["npass"] == $_POST["cfpass"])) {
+		$password = $_POST['npass'];
+        if (strlen($_POST["npass"]) <= 8 || !preg_match("#[0-9]+#",$password) || !preg_match("#[A-Z]+#",$password) || !preg_match("#[a-z]+#",$password)) {
+					$passwordErr = "Your New Password Must Contain At Least 8 Characters, 1 Number, 1 Capital Letter, 1 Lowercase Letter!";
+				}
+		else{
+			$sql=mysqli_query($con,"SELECT password FROM  doctors where password='".md5($_POST['cpass'])."' && id='".$_SESSION['id']."'");
+			$num=mysqli_fetch_array($sql);
+				if($num>0)
+					{
+					$con=mysqli_query($con,"update doctors set password='".md5($_POST['npass'])."', updationDate='$currentTime' where id='".$_SESSION['id']."'");
+					$_SESSION['msg1']="Password Changed Successfully !";
+					}
+				}
+		}
+		elseif(empty($_POST['cpass']) || empty($_POST['npass']) || empty($_POST['cfpass'])){
+			$passwordErr = "Please enter your passwords";
+		}
+		else{
+			$passwordErr = "Old password don't match";
+		}
 }
 ?>
 <!DOCTYPE html>
@@ -43,36 +54,6 @@ $_SESSION['msg1']="Old Password not match !!";
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
-<script type="text/javascript">
-function valid()
-{
-if(document.chngpwd.cpass.value=="")
-{
-alert("Current Password Filed is Empty !!");
-document.chngpwd.cpass.focus();
-return false;
-}
-else if(document.chngpwd.npass.value=="")
-{
-alert("New Password Filed is Empty !!");
-document.chngpwd.npass.focus();
-return false;
-}
-else if(document.chngpwd.cfpass.value=="")
-{
-alert("Confirm Password Filed is Empty !!");
-document.chngpwd.cfpass.focus();
-return false;
-}
-else if(document.chngpwd.npass.value!= document.chngpwd.cfpass.value)
-{
-alert("Password and Confirm Password Field do not match  !!");
-document.chngpwd.cfpass.focus();
-return false;
-}
-return true;
-}
-</script>
 
 	</head>
 	<body>
@@ -114,9 +95,10 @@ return true;
 													<h5 class="panel-title">Change Password</h5>
 												</div>
 												<div class="panel-body">
-								<p style="color:red;"><?php echo htmlentities($_SESSION['msg1']);?>
+								<p style="color:green; font-size:17px;"><?php echo htmlentities($_SESSION['msg1']);?>
 								<?php echo htmlentities($_SESSION['msg1']="");?></p>	
-													<form role="form" name="chngpwd" method="post" onSubmit="return valid();">
+								<p style="color:red;font-size:16px;"><?php echo $passwordErr?>	
+													<form role="form" name="chngpwd" method="post">
 														<div class="form-group">
 															<label for="exampleInputEmail1">
 																Current Password
@@ -192,12 +174,6 @@ return true;
 		<script src="assets/js/main.js"></script>
 		<!-- start: JavaScript Event Handlers for this page -->
 		<script src="assets/js/form-elements.js"></script>
-		<script>
-			jQuery(document).ready(function() {
-				Main.init();
-				FormElements.init();
-			});
-		</script>
 		<!-- end: JavaScript Event Handlers for this page -->
 		<!-- end: CLIP-TWO JAVASCRIPTS -->
 	</body>
