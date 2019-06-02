@@ -2,8 +2,6 @@
 session_start();
 //error_reporting(0);
 include('include/config.php');
-include('include/checklogin.php');
-check_login();
 date_default_timezone_set('Europe/Amsterdam');
 $passwordErr = "";
 $currentTime = date( 'd-m-Y h:i:s A', time () );
@@ -140,11 +138,7 @@ if(isset($_POST['submit']))
 			<!-- start: FOOTER -->
 	<?php include('include/footer.php');?>
 			<!-- end: FOOTER -->
-		
-			<!-- start: SETTINGS -->
-	<?php include('include/setting.php');?>
-			<>
-			<!-- end: SETTINGS -->
+
 		</div>
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
