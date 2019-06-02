@@ -63,7 +63,7 @@ require("header.php");
 
 	<!-- 3 Boxes -->
 
-	<div class="boxes">
+	<div class="boxes" style="margin-left:200px;">
 		<div class="container">
 			<div class="row">
 				
@@ -93,15 +93,7 @@ require("header.php");
 				</div>
 
 				<!-- Box -->
-				<div class="col-lg-4 box_col">
-					<div class="box box_appointments">
-						
-					<i class='fas fa-id-card-alt' style='font-size:48px;color:red'></i><br>
-						<div class="box_title">Admin Login</div>
-						<div class="box_text">Sign in to your admin account!</div>
-						<div class="button" style='margin-top:10%;'><span><a href="#">Click Here</a></span></div>
-					</div>
-				</div>
+				
 
 			</div>
 		</div>

@@ -78,7 +78,17 @@ $result = mysqli_query($con,$query);
         var div = document.createElement("div");
         div.setAttribute('class','our-team-main');
         var img = document.createElement("img");
+        <?php if($num['gender'] == "male")
+        {?>
         img.setAttribute("src", "../images/MaleDoctor.jpg");
+        <?php
+        }elseif($num['gender'] == "female")
+        {
+            ?>
+         img.setAttribute("src", "../images/FemaleDoctor.jpg");
+         <?php
+        }
+        ?>
         var h3 = document.createElement("h3");
         h3.appendChild(document.createTextNode("<?php echo $num['doctorName']?>"));
         div.appendChild(img);
