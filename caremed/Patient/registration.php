@@ -21,7 +21,8 @@ if(isset($_POST['submit']))
 	$email=test_input($_POST['email']);
 	$password=test_input($_POST['password']);
 	$cpassword=test_input($_POST['cpassword']);
-	$_SESSION['fullName'] = $fname;
+	$_SESSION['name'] = $fname;
+	$_SESSION['surname'] = $lname;
 
 	if(!empty($_POST["password"]) && ($_POST["password"] == $_POST["cpassword"])) {
         if (strlen($_POST["password"]) <= 8 || !preg_match("#[0-9]+#",$password) || !preg_match("#[A-Z]+#",$password) || !preg_match("#[a-z]+#",$password)) {

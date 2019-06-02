@@ -45,7 +45,7 @@
 									<div class="home_content_inner">
 									<?php
     session_start();
-    echo "<h2>Welcome to Caremed ".$_SESSION['fullName']." !</h2>";
+    echo "<h2>Welcome to Caremed ".$_SESSION['name']." ".$_SESSION['surname']." !</h2>";
     echo "<h1>Thank you for your registration!</h1>";
 
                                     ?>

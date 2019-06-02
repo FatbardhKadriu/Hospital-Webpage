@@ -7,7 +7,12 @@ if(isset($_POST['submit']))
 	$username = mysqli_real_escape_string($con, $_POST['username']);
 	$password = mysqli_real_escape_string($con, $_POST['password']);
 	$password = md5($password);
-	$ret=mysqli_query($con,"SELECT * FROM users WHERE email='$username' and password='$password'");
+	$sql = "SELECT * FROM users WHERE email = '".$username ."'";
+	if(!isset($_COOKIE['user_email']))
+	{
+		$sql .= "AND password = '".$password."'";
+	}
+	$ret=mysqli_query($con,$sql);
 	$num=mysqli_fetch_array($ret);
 
 if($num>0)
@@ -17,6 +22,17 @@ if($num>0)
 	$date = $num['regDate'];
 	$date = strtotime($date);
 	$date = date('M d Y',$date);
+	if(!empty($_POST['remember']))
+	{
+		setcookie("user_email", $email, time() + (365*24*60*60));
+		setcookie ("user_password",$_POST["password"],time()+ (365 * 24 * 60 * 60));
+	}else{
+		if(isset($_COOKIE['user_email']))
+		{
+			setcookie("user_email","");
+			setcookie("user_password", "");
+		}
+	}
 	if($verified == 1)
 	{
 		$extra="dashboard.php";//
@@ -99,16 +115,20 @@ else
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="text" class="form-control" name="username" placeholder="Username">
+									<input type="text" class="form-control" value="<?php if(isset($_COOKIE["user_email"])) { echo $_COOKIE["user_email"]; } ?>" name="username" placeholder="Username">
 									<i class="fa fa-user"></i> </span>
 							</div>
 							<div class="form-group form-actions">
 								<span class="input-icon">
-									<input type="password" class="form-control password" name="password" placeholder="Password">
+									<input type="password" class="form-control password" value="<?php if(isset($_COOKIE["user_password"])) { echo $_COOKIE["user_password"]; } ?>" name="password" placeholder="Password">
 									<i class="fa fa-lock"></i>
 									 </span>
 									
 							</div>
+							<div class="field-group">
+		<div><input type="checkbox" name="remember" id="remember" <?php if(isset($_COOKIE["user_email"])) { ?> checked <?php } ?> />
+		<label for="remember-me">Remember me</label>
+	</div>
 							<div class="forgot-pass">
 							<a href="forgot-password.php">
 							Forgot your password?
