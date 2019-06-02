@@ -154,7 +154,7 @@ if(isset($_POST['submit']))
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()" 
+								<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()" 
 									 value="<?= isset($_POST['email']) ? $_POST['email'] : ''; ?>" placeholder="Email" required>
 									<i class="fa fa-envelope"></i> </span>
 									 <span id="user-availability-status1" style="font-size:12px;"></span>
