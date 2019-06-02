@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("include/config.php");
+
 if(isset($_POST['submit']))
 {
 $ret=mysqli_query($con,"SELECT * FROM doctors WHERE docEmail='".$_POST['username']."' and password='".md5($_POST['password'])."'");
@@ -75,7 +76,10 @@ exit();
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="text" class="form-control" name="username" placeholder="Username">
+									<input type="text" class="form-control" <?php if(isset($_GET['email']))
+		  {
+		          ?> value="<?php echo $_GET['email']?>" readonly <?php
+		  }?> name="username" placeholder="Username">
 									<i class="fa fa-user"></i> </span>
 							</div>
 							<div class="form-group form-actions">
