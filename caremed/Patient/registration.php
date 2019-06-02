@@ -145,10 +145,9 @@ if(isset($_POST['submit']))
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()" 
+									<input type="email" class="form-control" title="Email" name="email" id="email" onBlur="userAvailability()" 
 									 value="<?= isset($_POST['email']) ? $_POST['email'] : ''; ?>" placeholder="Email" required>
 									<i class="fa fa-envelope"></i> </span>
-									<p><img src="assetsLoaderIcon.gif" id="loaderIcon" style="display:none" /></p>
 									 <span id="user-availability-status1" style="font-size:12px;"></span>
 							</div>
 							<span style="color:red;">

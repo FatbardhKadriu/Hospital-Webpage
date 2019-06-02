@@ -65,6 +65,10 @@ $result = mysqli_query($con,$query);
 {
     background-color: #0000FF;
 }
+a.linkalign{
+    margin-left:30px;
+    font-size:25px;
+}
 </style>
 </head>
 <body>
@@ -91,10 +95,12 @@ $result = mysqli_query($con,$query);
          <?php
         }
         ?>
-        var h3 = document.createElement("h3");
-        h3.appendChild(document.createTextNode("<?php echo $num['doctorName']?>"));
+        var link = document.createElement("a");
+        link.appendChild(document.createTextNode("<?php echo $num['doctorName']?>"));
+        link.setAttribute('href', "../Doctor/index.php?email=<?php echo $num['docEmail'];?>");
+        link.setAttribute('class','linkalign');
         div.appendChild(img);
-        div.appendChild(h3);
+        div.appendChild(link);
         document.getElementById("divContainer").appendChild(div);
     <?php
     }?>
