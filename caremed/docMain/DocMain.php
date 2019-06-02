@@ -11,8 +11,10 @@ $result = mysqli_query($con,$query);
     <head>
     <style>
  body{
-            background:url('../images/dna.jpg');    
+            background:url('../images/m3.jpg');    
             background-attachment: fixed;
+            background-size:cover;
+
 
     }
 #divContainer{
