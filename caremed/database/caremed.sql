@@ -37,17 +37,16 @@ CREATE TABLE `doctors` (
   `contactno` bigint(11) NOT NULL,
   `docEmail` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `creationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updationDate` varchar(255) NOT NULL
+  `creationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
-INSERT INTO `doctors` (`id`, `specilization`, `doctorName`,`gender`, `address`, `docFees`, `contactno`, `docEmail`, `password`, `updationDate`) VALUES
-(1, 'Dentist', 'Doctor 1','male', 'Address 1', '500', 045111222, 'doc1@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', ''),
-(2, 'physiotherapist', 'Doctor 2','male', 'Address 2', '600', 045333444, 'doc2@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', ''),
-(3, 'General Physician', 'Doctor 3', 'female','Address 3', '1200', 045323123, 'doc3@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', ''),
-(4, 'Othorino-laringologist', 'Doctor 4','female', 'Address 4', '700', 045123211, 'doc4@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', ''),
-(5, 'Dermatologist', 'Doctor 5', 'male','Address 5', '900', 045444111, 'doc5@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', ''),
-(6, 'General Physician', 'Doctor 6','female', 'Address 6', '2500', 044191919, 'doc6@gmail.com', '2c9341ca4cf3d87b9e4eb905d6a3ec45', '');
+INSERT INTO `doctors` (`id`, `specilization`, `doctorName`,`gender`, `address`, `docFees`, `contactno`, `docEmail`, `password`) VALUES
+(1, 'Dentist', 'Fatbardh Kadriu','male', 'Address 1', '40', 045111222, 'bardhi@gmail.com', 'de321153d721ffdc5cb5bcf648813fd4'),
+(2, 'physiotherapist', 'Fortesa Hysenaj','female', 'Address 2', '50', 045333444, 'fortesa@gmail.com', 'de321153d721ffdc5cb5bcf648813fd4'),
+(3, 'General Physician', 'Fatbardh Gashi', 'male','Address 3', '60', 045323123, 'fatbardh@gmail.com', 'de321153d721ffdc5cb5bcf648813fd4'),
+(4, 'Othorino-laringologist', 'Albin Qerimi','male', 'Address 4', '20', 045123211, 'albin@gmail.com', 'de321153d721ffdc5cb5bcf648813fd4'),
+(5, 'Dermatologist', 'Jakup Dobranja', 'male','Address 5', '35', 045444111, 'jakupdobranja@gmail.com', 'de321153d721ffdc5cb5bcf648813fd4'),
+(6,'Ophthalmologist', 'Laura Tupeci','female', 'Address 6','100', 044123456, 'laura@gmail.com','de321153d721ffdc5cb5bcf648813fd4');
 
 
 CREATE TABLE `doctorslog` (
@@ -63,16 +62,15 @@ CREATE TABLE `doctorslog` (
 CREATE TABLE `doctorspecilization` (
   `id` int(11) NOT NULL primary key,
   `specilization` varchar(255) NOT NULL,
-  `creationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updationDate` varchar(255) NOT NULL
+  `creationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 INSERT INTO `doctorspecilization` (`id`, `specilization`) VALUES
 (1, 'Gynecologist/Obstetrician' ),
-(2, 'General Physician' ),
-(3, 'Dermatologist'),
-(4, 'Dentist'),
-(5, 'Othorino-laringologist' );
+(2, 'Dermatologist'),
+(3, 'Dentist'),
+(4, 'Othorino-laringologist' ),
+(5, 'Ophthalmologist' );
 
 CREATE TABLE `userlog` (
   `id` int(11) NOT NULL primary key,
@@ -87,7 +85,8 @@ CREATE TABLE `userlog` (
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL primary key,
-  `fullName` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `surname` varchar(255) NOT NULL,
   `address` longtext NOT NULL,
   `city` varchar(255) NOT NULL,
   `gender` varchar(255) NOT NULL,
@@ -95,13 +94,12 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `vkey` varchar(225) NOT NULL,
   `verified` tinyint(1) DEFAULT 0,
-  `regDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updationDate` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  `regDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
-INSERT INTO `users` (`id`, `fullName`, `address`, `city`, `gender`, `email`, `password`,`vkey`,`verified`) VALUES
-(6, 'Patient1', 'Address 1', 'City 1', 'male', 'pat1@gmail.com', '123456','d06cb96ede48add563fe8d90ab8b408d','1'),
-(7, 'Patient2', 'Address 2', 'City 2', 'female', 'pat2@gmail.com', '123456','d8d2d2b2a62c733d4ba6c4561cd6d55c','1');
+INSERT INTO `users` (`id`, `name`,`surname`, `address`, `city`, `gender`, `email`, `password`,`vkey`,`verified`) VALUES
+(6, 'Patient', '1', 'Address 1', 'City 1', 'male', 'pat1@gmail.com', 'a3dc060137b711a2736bebc5a72edc77','d06cb96ede48add563fe8d90ab8b408d','1'),
+(7, 'Patient', '2','Address 2', 'City 2', 'female', 'pat2@gmail.com', 'a3dc060137b711a2736bebc5a72edc77','d8d2d2b2a62c733d4ba6c4561cd6d55c','1');
 
 create table `contact`(
 `id` int(10) primary key auto_increment,
@@ -111,13 +109,15 @@ create table `contact`(
 `message` varchar(1000));
 
 CREATE TABLE `medicines`(
-	`id` varchar(100) primary key,
+	`id` int primary key auto_increment,
     `m_name` varchar(100) not null,
     `qty` varchar(100) not null
     );
 
-INSERT INTO `medicines` () VALUES ('1A', 'medicine1', 10);
-INSERT INTO `medicines` () VALUES ('1B', 'medicine2', 70);
+INSERT INTO `medicines`(`m_name`, `qty`) VALUES ('medicine1', 10);
+INSERT INTO `medicines`(`m_name`, `qty`) VALUES ('medicine2', 70);
+
+
 
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;

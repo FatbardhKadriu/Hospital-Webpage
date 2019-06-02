@@ -2,6 +2,7 @@
 session_start();
 include_once('include/config.php');
 $passwordErr = "";
+$nameErr="";
 $cpasswordErr = "";
 function test_input($data) {
 	$data = stripslashes($data);
@@ -12,7 +13,8 @@ function test_input($data) {
   }
 if(isset($_POST['submit']))
 {
-	$fname=test_input($_POST['full_name']);
+	$fname=test_input($_POST['name']);
+	$lname=test_input($_POST['surname']);
 	$address=test_input($_POST['address']);
 	$city=test_input($_POST['city']);
 	$gender=test_input($_POST['gender']);
@@ -28,6 +30,7 @@ if(isset($_POST['submit']))
 				else{
 					
 						$fname = mysqli_real_escape_string($con, $fname);
+						$lname = mysqli_real_escape_string($con, $lname);
 						$address = mysqli_real_escape_string($con, $address);
 						$city = mysqli_real_escape_string($con, $city);
 						$gender = mysqli_real_escape_string($con, $gender);
@@ -39,7 +42,7 @@ if(isset($_POST['submit']))
 
 						$password = md5($password);
 
-					$query=mysqli_query($con,"insert into users(fullname,address,city,gender,email,password,vkey) values('$fname','$address','$city','$gender','$email','$password','$vkey')");
+					$query=mysqli_query($con,"insert into users(name,surname,address,city,gender,email,password,vkey) values('$fname','$lname','$address','$city','$gender','$email','$password','$vkey')");
 					if($query)
 					{
 						  $host = $_SERVER['HTTP_HOST'];
@@ -115,7 +118,13 @@ if(isset($_POST['submit']))
 								Enter your personal details below:
 							</p>
 							<div class="form-group">
-								<input type="text" class="form-control" name="full_name" value="<?= isset($_POST['full_name']) ? $_POST['full_name'] : ''; ?>" placeholder="Full Name" required>
+							<span style="color:red;">
+							<?php echo $nameErr ?>
+							</span>
+								<input type="text" class="form-control" name="name" value="<?= isset($_POST['name']) ? $_POST['name'] : ''; ?>" placeholder="Name" required>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" name="surname" value="<?= isset($_POST['surname']) ? $_POST['surname'] : ''; ?>" placeholder="Surname" required>
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control" name="address" value="<?= isset($_POST['address']) ? $_POST['address'] : ''; ?>" placeholder="Address" required>
@@ -145,7 +154,7 @@ if(isset($_POST['submit']))
 							</p>
 							<div class="form-group">
 								<span class="input-icon">
-									<input type="email" class="form-control" title="Email" name="email" id="email" onBlur="userAvailability()" 
+									<input type="email" class="form-control" name="email" id="email" onBlur="userAvailability()" 
 									 value="<?= isset($_POST['email']) ? $_POST['email'] : ''; ?>" placeholder="Email" required>
 									<i class="fa fa-envelope"></i> </span>
 									 <span id="user-availability-status1" style="font-size:12px;"></span>
