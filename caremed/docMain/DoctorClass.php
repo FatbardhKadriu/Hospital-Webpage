@@ -23,7 +23,7 @@ class DoctorClass
     }
     public function showHeader()
     {
-        include("../header.php");
+        include("header.php");
     }
 
     public function showMain()
